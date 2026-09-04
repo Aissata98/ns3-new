@@ -1,0 +1,28 @@
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+----------- Initializing AUV-Based EDC simulation -----------
+Use sweeps like: ./ns3 run "scratch/edc --trafficLoad=1 --nodes=126"
+
+----------- AUV-Based EDC UW-LSN summary -----------
+Paper setup: MAC=Underwater MAC, UDP-like packets, omni acoustic, BW=25000 Hz, rate=31200 bps, simTime=23450 s, trafficStop=4000 s, protocol=contribution, auvCollectionMedium=optical, energyModel=hardware, matchHybridQueues=0, ddnBufferPolicy=priority, nodeIdlePowerW=0.0005
+Acoustic MAC: aloha (hop ACKs off; end-to-end retry)
+Topology: BSN=144 DRN=36 DDN=8 SINK=15 sinkPlacement=hybrid AUV=1 length=12600 m pipelineDepth=1000 m ddnEomOffset=500 m
+Ranges: BSN=100 DRN=250 DDN=400 DDN-AUV=400 SINK=500 m
+AUV: speed=6.087 km/h contactDepth=500 m sinusAmplitude=0 m completePatrolInSimTime=0
+UWOC: waterType=clear-ocean c=0.151 1/m opticalRange=30 m dataRate=2.5e+06 bps pointingSigma=0.75 m pointingCoherence=60 s m divergence=30 deg disableOpticalLoss=0
+Traffic: load=0.05 pkt/s payloadBytes(H/M/L)=64/256/25000 ddnContactPacketsPerTick=0 sinkContactPacketsPerTick=0
+Generated=201 gatewayOriginated=122 reachedDDN=201 collectedByAUV=123 deliveredToSink=194 directCriticalToSink=15 directMediumToSink=56 directLowToSink=0 mediumFallbackRhoMax=0.4 lowFallbackRhoMax=0 opticalTransfers=123 opticalAttempted=123 opticalLost=0 opticalPending=0 opticalLossPct=0 opticalMeanPktSuccess=1 opticalMeanSnrDb=43.2773 acousticTransfers=1441 acousticTxBytes=4174425 acousticTxAirtimeS=1070.37 acousticSourceAttempts=80 acousticRetransmissions=1 acousticRetryExhausted=0 acousticAcks=79 acousticPending=0 directSourceAttempts=72 directRetransmissions=1 directCyclesExhausted=0 directAcks=71 directPending=0 mobileSourceAttempts=0 mobileRetransmissions=0 mobileContactFailures=0 mobileAcks=0 mobilePending=0 auvSurfaceSourceAttempts=164 auvSurfaceRetransmissions=41 auvSurfaceContactFailures=0 auvSurfaceAcks=123 auvSurfacePending=0 energyConsumedJ=5.32381e+06 ddnBuffered=0 auvBuffered=0
+Priority: highGenerated=16 mediumGenerated=63 lowGenerated=122 highDelivered=16 mediumDelivered=56 lowDelivered=122
+PDR_surface=96.5174 %
+AvgDelay_E2E=4288.8547 s  (BSN->surface-sink, includes AUV transit)
+Throughput=1045.7518 bps
+EnergyPerPkt=27442314.9177 mJ/pkt
+PDR_DDN=39.3035 %  (BSN->DDN acoustic, comparable to Ahmed 2022)
+AvgDelay_acoustic=0.9611 s  (BSN->DDN hop only, ~1-9 s reference range)
+Priority_PDR: HIGH=100.0000% MEDIUM=88.8889% LOW=100.0000%
+Priority_delay: HIGH=7.8670s MEDIUM=241.1048s LOW=6708.2792s
+Priority_miss: HIGH=0.0000% MEDIUM=11.1111% LOW=0.0000%
+Priority_energy: HIGH=14.6068 mJ/byte MEDIUM=9.7895 mJ/byte LOW=3.0994 mJ/byte
+Node_role_energy: BSN=1680.2841 J DRN=447.7857 J DDN=277.5749 J AUV=5320591.4933 J SINK=811.9561 J dominant=AUV
+Node_role_energy_pct: BSN=0.0316% DRN=0.0084% DDN=0.0052% AUV=99.9396% SINK=0.0153%
+RESULT nodes=180 protocol=contribution matchHybridQueues=0 ddnBufferPolicy=priority nodeIdlePowerW=0.0005 trafficLoad=0.0500 trafficStop=4000.0000 sinkPlacement=hybrid generated=201 delivered=194 pdr=96.5174 avgDelayE2E=4288.8547 avgDelayAcoustic=0.9611 pdrDDN=39.3035 throughputBps=1045.7518 energyJ=5323809.0940 energyPerPktMj=27442314.9177 pdrHigh=100.0000 pdrMedium=88.8889 pdrLow=100.0000 highAvgDelay=7.8670 mediumAvgDelay=241.1048 lowAvgDelay=6708.2792 highMissRatio=0.0000 mediumMissRatio=11.1111 lowMissRatio=0.0000 burstGenerated=0 burstDelivered=0 burstMeanDelay=0.0000 burstDeadlineMiss=0 highDeadlineMiss=0 mediumDeadlineMiss=0 lowDeadlineMiss=0 directCritical=15 bufferDropped=0 bufferDroppedHigh=0 bufferDroppedMedium=0 bufferDroppedLow=0 directLow=0 acousticSourceAttempts=80 acousticRetransmissions=1 acousticRetryExhausted=0 acousticAcks=79 acousticPending=0 directSourceAttempts=72 directRetransmissions=1 directCyclesExhausted=0 directAcks=71 directPending=0 mobileSourceAttempts=0 mobileRetransmissions=0 mobileContactFailures=0 mobileAcks=0 mobilePending=0 auvSurfaceSourceAttempts=164 auvSurfaceRetransmissions=41 auvSurfaceContactFailures=0 auvSurfaceAcks=123 auvSurfacePending=0 optical=123 opticalAttempted=123 opticalLost=0 opticalPending=0 opticalLossPct=0.0000 opticalMeanPktSuccess=1.0000 opticalMeanSnrDb=43.2773 directMedium=56 highEnergyJ=14.9573 mediumEnergyJ=140.3428 lowEnergyJ=9453.3017 bsnEnergyJ=1680.2841 drnEnergyJ=447.7857 ddnEnergyJ=277.5749 auvEnergyJ=5320591.4933 sinkEnergyJ=811.9561 bsnEnergyPct=0.0316 drnEnergyPct=0.0084 ddnEnergyPct=0.0052 auvEnergyPct=99.9396 sinkEnergyPct=0.0153 dominantNodeRole=AUV highEnergyMjByte=14.6068 mediumEnergyMjByte=9.7895 lowEnergyMjByte=3.0994 rhoMax=0.4000 lowRhoMax=0.0000 opticalExtCoeff=0.1510

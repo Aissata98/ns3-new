@@ -1,0 +1,17 @@
+baseline,alternative,idle_power_mw_per_position,baseline_submerged_energy_kj,alternative_submerged_energy_kj,alternative_reduction_percent
+direct_acoustic_priority,hybrid_high_medium,0.1,10.29885259745,0.7094993731000001,93.11088913656583
+direct_acoustic_priority,hybrid_high_medium,0.5,11.987252597449999,2.3978993731,79.99625557560957
+direct_acoustic_priority,hybrid_high_medium,1.0,14.097752597449999,4.5083993731,68.02043913073436
+direct_acoustic_priority,hybrid_high_medium,2.0,18.318752597449997,8.7293993731,52.347195439960544
+direct_acoustic_priority,hybrid_high_medium,5.0,30.981752597449997,21.3923993731,30.95161642062581
+direct_acoustic_priority,hybrid_high_medium,10.0,52.08675259745,42.4973993731,18.410349553678
+direct_acoustic_priority,hybrid_high_medium,20.0,94.29675259745001,84.70739937309999,10.169335592378955
+direct_acoustic_priority,hybrid_high_medium,50.0,220.92675259745,211.3373993731,4.340512460173951
+direct_acoustic,hybrid_high_medium,0.1,10.303935078250001,0.7094993731000001,93.11428723383902
+direct_acoustic,hybrid_high_medium,0.5,11.992335078250001,2.3978993731,80.00473337799768
+direct_acoustic,hybrid_high_medium,1.0,14.102835078250001,4.5083993731,68.03196415412212
+direct_acoustic,hybrid_high_medium,2.0,18.32383507825,8.7293993731,52.36041289488787
+direct_acoustic,hybrid_high_medium,5.0,30.98683507825,21.3923993731,30.962941781312924
+direct_acoustic,hybrid_high_medium,10.0,52.09183507825,42.4973993731,18.418310068627207
+direct_acoustic,hybrid_high_medium,20.0,94.30183507825001,84.70739937309999,10.17417709548146
+direct_acoustic,hybrid_high_medium,50.0,220.93183507825,211.3373993731,4.34271308240926

@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying manuscript and identify the artifact release used."
+type: software
+title: "Reviewer artifact: Direct Acoustic versus AUV-Assisted Hybrid Reporting for Subsea Pipeline Monitoring"
+version: "2026.09.03"
+authors:
+  - family-names: Diallo
+    given-names: Aissata Mamadou
+  - family-names: Rafalia
+    given-names: Najat
+  - family-names: Abouchabaka
+    given-names: Jaafar
+repository-code: "https://github.com/Aissata98/ns3-new"
+license: MIT
