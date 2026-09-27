@@ -1,0 +1,454 @@
+{
+  "schema": "sensors-kernel-tests-v6",
+  "started_at_utc": "2026-09-20T15:10:46.999848+00:00",
+  "platform": "macOS-15.6.1-arm64-arm-64bit",
+  "compiler": {
+    "argv": [
+      "/usr/bin/clang++",
+      "--version"
+    ],
+    "return_code": 0,
+    "stdout": "Apple clang version 17.0.0 (clang-1700.0.13.5)\nTarget: arm64-apple-darwin24.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+    "stderr": "",
+    "elapsed_s": 0.11849329099999999
+  },
+  "source_identities": {
+    "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization/test_closure_energy.cc": "1d66f8aea0f3b6cf2ed3bedd4d5bd9a0d2c06207393dc93a72c9a458f7a3e5d9",
+    "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization/test_closure_ingress.cc": "f9603b9066403029f99153ff2699b89b6e099cc031d099c42c7640fbefe03bf3",
+    "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization/test_closure_mission.cc": "4a051c00baaf45406d1762809b9f8199f919519d1b5488a9c79215d1225823ad",
+    "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization/test_closure_optical.cc": "b339be7efce408c5c967e56842e0291e8bf169224037a37d049eec7e81b5c233",
+    "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization/test_closure_adaptive.cc": "56f87a5b204f88e712312d45e2208079883efa72dba490862dd037634ca7e811",
+    "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization/closure_adaptive.h": "06285aaa2bf05a2c8e3d5b0becc68ed7c25eb39e3608b79175c4e0eaafb994cf",
+    "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization/closure_energy.h": "7294c676b024cb8d53ef2a8f2783e12025405e1a383db81dca45904c7fbca793",
+    "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization/closure_ingress.h": "8cb26f800c9cd7e030b1bc19d6660903f7b39217ae024deb34b9acef74382193",
+    "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization/closure_mission.h": "b3d0c742bdb5117ee4037b0f9f6509e05f3948f2c7f3ad02d6499b2afe6e8e62",
+    "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization/closure_mission_mobility.h": "0a771d54a40139db0f3d618fcdb3b5212b3b82dc1fea1b00238afac88fc54ccc",
+    "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization/closure_optical.h": "5c400a016d3eeec06189c4d67d4df1e3c2df0bc4250de97fca615d15495d9b77",
+    "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization/closure_phy.h": "cda23c6e6867d0959da636e5f33c71759e9ea0bfa4e1849518fa708a7df0def2",
+    "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization/record_kernel_tests_v6.py": "67d8bef6c04a7e3a955d6a92b6ef7b5d2115cad76119e1b8143f19a3bc44bb7f",
+    "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization/BUILD_INTEGRATED_V6.json": "8bd39b9fd09bf567ee43644d8842fbdf1c9c0cf22ee89dc0a0c0858c63d0891f"
+  },
+  "build_directory": "/private/tmp/sensors-kernel-v6-2yr3db7k",
+  "cases": [
+    {
+      "kernel": "energy",
+      "variant": "strict",
+      "assertions": 28,
+      "expected_marker": "CLOSURE_ENERGY_SELF_TEST_PASS checks=28",
+      "compile": {
+        "argv": [
+          "/usr/bin/clang++",
+          "-std=c++17",
+          "-Wall",
+          "-Wextra",
+          "-Wpedantic",
+          "-Werror",
+          "-O2",
+          "-I",
+          "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization",
+          "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization/test_closure_energy.cc",
+          "-o",
+          "/private/tmp/sensors-kernel-v6-2yr3db7k/energy-strict"
+        ],
+        "return_code": 0,
+        "stdout": "",
+        "stderr": "",
+        "elapsed_s": 0.747240208
+      },
+      "passed": true,
+      "binary_sha256": "10f0e25815df9770ff9c373113671159e8d2d8024764f0bd354328912ee0bb66",
+      "run": {
+        "argv": [
+          "/private/tmp/sensors-kernel-v6-2yr3db7k/energy-strict"
+        ],
+        "return_code": 0,
+        "stdout": "CLOSURE_ENERGY_SELF_TEST_PASS checks=28\n",
+        "stderr": "",
+        "elapsed_s": 0.20844341600000005
+      }
+    },
+    {
+      "kernel": "energy",
+      "variant": "asan_ubsan",
+      "assertions": 28,
+      "expected_marker": "CLOSURE_ENERGY_SELF_TEST_PASS checks=28",
+      "compile": {
+        "argv": [
+          "/usr/bin/clang++",
+          "-std=c++17",
+          "-Wall",
+          "-Wextra",
+          "-Wpedantic",
+          "-Werror",
+          "-O1",
+          "-g",
+          "-fsanitize=address,undefined",
+          "-fno-omit-frame-pointer",
+          "-I",
+          "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization",
+          "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization/test_closure_energy.cc",
+          "-o",
+          "/private/tmp/sensors-kernel-v6-2yr3db7k/energy-asan_ubsan"
+        ],
+        "return_code": 0,
+        "stdout": "",
+        "stderr": "",
+        "elapsed_s": 0.789204875
+      },
+      "passed": true,
+      "binary_sha256": "4cf5b58f10cb64958677351d2865f98096b8dde39d4fa7a35a281f9969c25855",
+      "sanitizer_environment": {
+        "ASAN_OPTIONS": "detect_leaks=0:halt_on_error=1",
+        "UBSAN_OPTIONS": "halt_on_error=1:print_stacktrace=1"
+      },
+      "leak_detection": "not_exercised_macOS; no leak-free claim",
+      "run": {
+        "argv": [
+          "/private/tmp/sensors-kernel-v6-2yr3db7k/energy-asan_ubsan"
+        ],
+        "return_code": 0,
+        "stdout": "CLOSURE_ENERGY_SELF_TEST_PASS checks=28\n",
+        "stderr": "",
+        "elapsed_s": 0.4716287920000002
+      }
+    },
+    {
+      "kernel": "ingress",
+      "variant": "strict",
+      "assertions": 120,
+      "expected_marker": "CLOSURE_INGRESS_TEST_PASS checks=120",
+      "compile": {
+        "argv": [
+          "/usr/bin/clang++",
+          "-std=c++17",
+          "-Wall",
+          "-Wextra",
+          "-Wpedantic",
+          "-Werror",
+          "-O2",
+          "-I",
+          "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization",
+          "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization/test_closure_ingress.cc",
+          "-o",
+          "/private/tmp/sensors-kernel-v6-2yr3db7k/ingress-strict"
+        ],
+        "return_code": 0,
+        "stdout": "",
+        "stderr": "",
+        "elapsed_s": 1.2458097500000003
+      },
+      "passed": true,
+      "binary_sha256": "b17241fc9e2be84cb764c7e2a3defe8cf41776803db0670b585217cc31775a70",
+      "run": {
+        "argv": [
+          "/private/tmp/sensors-kernel-v6-2yr3db7k/ingress-strict"
+        ],
+        "return_code": 0,
+        "stdout": "CLOSURE_INGRESS_TEST_PASS checks=120 full_physical_validation=false network_runs=0\n",
+        "stderr": "",
+        "elapsed_s": 0.1350524580000001
+      }
+    },
+    {
+      "kernel": "ingress",
+      "variant": "asan_ubsan",
+      "assertions": 120,
+      "expected_marker": "CLOSURE_INGRESS_TEST_PASS checks=120",
+      "compile": {
+        "argv": [
+          "/usr/bin/clang++",
+          "-std=c++17",
+          "-Wall",
+          "-Wextra",
+          "-Wpedantic",
+          "-Werror",
+          "-O1",
+          "-g",
+          "-fsanitize=address,undefined",
+          "-fno-omit-frame-pointer",
+          "-I",
+          "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization",
+          "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization/test_closure_ingress.cc",
+          "-o",
+          "/private/tmp/sensors-kernel-v6-2yr3db7k/ingress-asan_ubsan"
+        ],
+        "return_code": 0,
+        "stdout": "",
+        "stderr": "",
+        "elapsed_s": 3.0926425829999995
+      },
+      "passed": true,
+      "binary_sha256": "32c517665ce7d224925466354ed7228c50bd16072c82fa8f19659e58ca6c00ab",
+      "sanitizer_environment": {
+        "ASAN_OPTIONS": "detect_leaks=0:halt_on_error=1",
+        "UBSAN_OPTIONS": "halt_on_error=1:print_stacktrace=1"
+      },
+      "leak_detection": "not_exercised_macOS; no leak-free claim",
+      "run": {
+        "argv": [
+          "/private/tmp/sensors-kernel-v6-2yr3db7k/ingress-asan_ubsan"
+        ],
+        "return_code": 0,
+        "stdout": "CLOSURE_INGRESS_TEST_PASS checks=120 full_physical_validation=false network_runs=0\n",
+        "stderr": "",
+        "elapsed_s": 0.22831491699999962
+      }
+    },
+    {
+      "kernel": "mission",
+      "variant": "strict",
+      "assertions": 8688,
+      "expected_marker": "closure_mission: 8688 checks passed",
+      "compile": {
+        "argv": [
+          "/usr/bin/clang++",
+          "-std=c++17",
+          "-Wall",
+          "-Wextra",
+          "-Wpedantic",
+          "-Werror",
+          "-O2",
+          "-I",
+          "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization",
+          "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization/test_closure_mission.cc",
+          "-o",
+          "/private/tmp/sensors-kernel-v6-2yr3db7k/mission-strict"
+        ],
+        "return_code": 0,
+        "stdout": "",
+        "stderr": "",
+        "elapsed_s": 1.7887422090000005
+      },
+      "passed": true,
+      "binary_sha256": "32d2b0ba1592f383192b8084e5ef8edddf4f7a45ef8202de0b57bee0accae91f",
+      "run": {
+        "argv": [
+          "/private/tmp/sensors-kernel-v6-2yr3db7k/mission-strict"
+        ],
+        "return_code": 0,
+        "stdout": "closure_mission: 8688 checks passed; SOFTWARE/ENGINEERING SCENARIO, NOT FIELD VALIDATION\n",
+        "stderr": "",
+        "elapsed_s": 0.14029654200000152
+      }
+    },
+    {
+      "kernel": "mission",
+      "variant": "asan_ubsan",
+      "assertions": 8688,
+      "expected_marker": "closure_mission: 8688 checks passed",
+      "compile": {
+        "argv": [
+          "/usr/bin/clang++",
+          "-std=c++17",
+          "-Wall",
+          "-Wextra",
+          "-Wpedantic",
+          "-Werror",
+          "-O1",
+          "-g",
+          "-fsanitize=address,undefined",
+          "-fno-omit-frame-pointer",
+          "-I",
+          "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization",
+          "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization/test_closure_mission.cc",
+          "-o",
+          "/private/tmp/sensors-kernel-v6-2yr3db7k/mission-asan_ubsan"
+        ],
+        "return_code": 0,
+        "stdout": "",
+        "stderr": "",
+        "elapsed_s": 4.132191916
+      },
+      "passed": true,
+      "binary_sha256": "c221b25c3b9896595582ec7a2a3c25a33652d119a631a3f1de5200aa06c60e58",
+      "sanitizer_environment": {
+        "ASAN_OPTIONS": "detect_leaks=0:halt_on_error=1",
+        "UBSAN_OPTIONS": "halt_on_error=1:print_stacktrace=1"
+      },
+      "leak_detection": "not_exercised_macOS; no leak-free claim",
+      "run": {
+        "argv": [
+          "/private/tmp/sensors-kernel-v6-2yr3db7k/mission-asan_ubsan"
+        ],
+        "return_code": 0,
+        "stdout": "closure_mission: 8688 checks passed; SOFTWARE/ENGINEERING SCENARIO, NOT FIELD VALIDATION\n",
+        "stderr": "",
+        "elapsed_s": 0.24643716700000162
+      }
+    },
+    {
+      "kernel": "optical",
+      "variant": "strict",
+      "assertions": 119,
+      "expected_marker": "CLOSURE_OPTICAL_CONTRACT_PASS checks=119",
+      "compile": {
+        "argv": [
+          "/usr/bin/clang++",
+          "-std=c++17",
+          "-Wall",
+          "-Wextra",
+          "-Wpedantic",
+          "-Werror",
+          "-O2",
+          "-I",
+          "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization",
+          "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization/test_closure_optical.cc",
+          "-o",
+          "/private/tmp/sensors-kernel-v6-2yr3db7k/optical-strict"
+        ],
+        "return_code": 0,
+        "stdout": "",
+        "stderr": "",
+        "elapsed_s": 0.642941875
+      },
+      "passed": true,
+      "binary_sha256": "28f00253c22ff548da192e43a6dc633f7d88650cf5ea59c5a929165b42d904d2",
+      "run": {
+        "argv": [
+          "/private/tmp/sensors-kernel-v6-2yr3db7k/optical-strict"
+        ],
+        "return_code": 0,
+        "stdout": "CLOSURE_OPTICAL_CONTRACT_PASS checks=119 network_runs=0 hardware_validation=false\n",
+        "stderr": "",
+        "elapsed_s": 0.13385754199999944
+      }
+    },
+    {
+      "kernel": "optical",
+      "variant": "asan_ubsan",
+      "assertions": 119,
+      "expected_marker": "CLOSURE_OPTICAL_CONTRACT_PASS checks=119",
+      "compile": {
+        "argv": [
+          "/usr/bin/clang++",
+          "-std=c++17",
+          "-Wall",
+          "-Wextra",
+          "-Wpedantic",
+          "-Werror",
+          "-O1",
+          "-g",
+          "-fsanitize=address,undefined",
+          "-fno-omit-frame-pointer",
+          "-I",
+          "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization",
+          "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization/test_closure_optical.cc",
+          "-o",
+          "/private/tmp/sensors-kernel-v6-2yr3db7k/optical-asan_ubsan"
+        ],
+        "return_code": 0,
+        "stdout": "",
+        "stderr": "",
+        "elapsed_s": 1.1665058749999986
+      },
+      "passed": true,
+      "binary_sha256": "f74d4e08fc15f59d33ac799e9638476ddfb64be3d369a298e73454dfd8dc4f12",
+      "sanitizer_environment": {
+        "ASAN_OPTIONS": "detect_leaks=0:halt_on_error=1",
+        "UBSAN_OPTIONS": "halt_on_error=1:print_stacktrace=1"
+      },
+      "leak_detection": "not_exercised_macOS; no leak-free claim",
+      "run": {
+        "argv": [
+          "/private/tmp/sensors-kernel-v6-2yr3db7k/optical-asan_ubsan"
+        ],
+        "return_code": 0,
+        "stdout": "CLOSURE_OPTICAL_CONTRACT_PASS checks=119 network_runs=0 hardware_validation=false\n",
+        "stderr": "",
+        "elapsed_s": 0.16883270800000005
+      }
+    },
+    {
+      "kernel": "adaptive",
+      "variant": "strict",
+      "assertions": 140,
+      "expected_marker": "closure_adaptive: 140 checks passed",
+      "compile": {
+        "argv": [
+          "/usr/bin/clang++",
+          "-std=c++17",
+          "-Wall",
+          "-Wextra",
+          "-Wpedantic",
+          "-Werror",
+          "-O2",
+          "-I",
+          "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization",
+          "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization/test_closure_adaptive.cc",
+          "-o",
+          "/private/tmp/sensors-kernel-v6-2yr3db7k/adaptive-strict"
+        ],
+        "return_code": 0,
+        "stdout": "",
+        "stderr": "",
+        "elapsed_s": 1.761910750000002
+      },
+      "passed": true,
+      "binary_sha256": "bcf1c0b81d544e6a9ca82d0aba9fa555cae883be72d66e4f230442d9829949e8",
+      "run": {
+        "argv": [
+          "/private/tmp/sensors-kernel-v6-2yr3db7k/adaptive-strict"
+        ],
+        "return_code": 0,
+        "stdout": "closure_adaptive: 140 checks passed\n",
+        "stderr": "",
+        "elapsed_s": 0.13371845900000068
+      }
+    },
+    {
+      "kernel": "adaptive",
+      "variant": "asan_ubsan",
+      "assertions": 140,
+      "expected_marker": "closure_adaptive: 140 checks passed",
+      "compile": {
+        "argv": [
+          "/usr/bin/clang++",
+          "-std=c++17",
+          "-Wall",
+          "-Wextra",
+          "-Wpedantic",
+          "-Werror",
+          "-O1",
+          "-g",
+          "-fsanitize=address,undefined",
+          "-fno-omit-frame-pointer",
+          "-I",
+          "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization",
+          "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization/test_closure_adaptive.cc",
+          "-o",
+          "/private/tmp/sensors-kernel-v6-2yr3db7k/adaptive-asan_ubsan"
+        ],
+        "return_code": 0,
+        "stdout": "",
+        "stderr": "",
+        "elapsed_s": 4.094220541999999
+      },
+      "passed": true,
+      "binary_sha256": "333d02c9275134d7d81bf4c0ad24d149d16264a8529ca804f549a5f3575af5fc",
+      "sanitizer_environment": {
+        "ASAN_OPTIONS": "detect_leaks=0:halt_on_error=1",
+        "UBSAN_OPTIONS": "halt_on_error=1:print_stacktrace=1"
+      },
+      "leak_detection": "not_exercised_macOS; no leak-free claim",
+      "run": {
+        "argv": [
+          "/private/tmp/sensors-kernel-v6-2yr3db7k/adaptive-asan_ubsan"
+        ],
+        "return_code": 0,
+        "stdout": "closure_adaptive: 140 checks passed\n",
+        "stderr": "",
+        "elapsed_s": 0.24089729099999957
+      }
+    }
+  ],
+  "network_runs_executed": 0,
+  "maximum_parallel_compilers": 1,
+  "full_physical_validation": false,
+  "campaign_launch_allowed": false,
+  "paper_performance_result": false,
+  "status": "passed",
+  "source_identities_stable": true,
+  "unique_kernel_assertions": 9095,
+  "executed_assertions_across_variants": 18190,
+  "finished_at_utc": "2026-09-20T15:11:08.724980+00:00"
+}

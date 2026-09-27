@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.DS_Store
+replay-output*/
+*.zip
+*.tar.gz
+.env
+.env.*

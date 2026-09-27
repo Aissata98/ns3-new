@@ -1,4 +1,0 @@
-metric,n_pairs,resamples,analysis_seed,baseline_design,alternative_design,mean_alternative_minus_baseline,percentile_ci95_lower,percentile_ci95_upper
-pdr,20,200000,20260829,direct_acoustic_priority,hybrid_high_medium,-1.21548095,-1.931091305000001,-0.5667237725000003
-highMissRatio,20,200000,20260829,direct_acoustic_priority,hybrid_high_medium,-0.02070394999999996,-0.7142857499999999,0.6521739
-mediumMissRatio,20,200000,20260829,direct_acoustic_priority,hybrid_high_medium,4.0871603499999996,1.9741263375,6.3715389325

@@ -1,0 +1,9 @@
+*
+!Dockerfile
+!Dockerfile.local
+!replay.py
+!local_build.py
+!MODEL_MANIFEST.json
+!LOCAL_BASE_IDENTITY.json
+!model/
+!model/**

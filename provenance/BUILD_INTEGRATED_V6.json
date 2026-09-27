@@ -1,0 +1,110 @@
+{
+  "schema": "reviewed-integrated-build-v1",
+  "checked_at_utc": "2026-09-20T15:04:05.820770+00:00",
+  "status": "passed",
+  "identities": {
+    "/opt/ns-allinone-3.40/ns-3.40/build/scratch/ns3.40-edc-reviewed-optimized": "ff69c4f2c75b19763fbcf1b71a68ac322197e25753977c04e1137c6e1ddfa5da",
+    "/opt/ns-allinone-3.40/ns-3.40/build/scratch/ns3.40-test_closure_phy-optimized": "5c2479de30b67358447d59aad6c72f13414d631d21e591bf5652821b6ee06486",
+    "/opt/ns-allinone-3.40/ns-3.40/scratch/edc-reviewed.cc": "7505249bf0b6ff5b1c2d2fb5881b8a3cee96260ee56e4d16ee56a72ad16708ac",
+    "/opt/ns-allinone-3.40/ns-3.40/scratch/external_workload_replay.h": "008baac043989e6235360d42519063d5e1ee5a9ce287ae0bf0687555cac184dd",
+    "/opt/ns-allinone-3.40/ns-3.40/scratch/closure_adaptive.h": "06285aaa2bf05a2c8e3d5b0becc68ed7c25eb39e3608b79175c4e0eaafb994cf",
+    "/opt/ns-allinone-3.40/ns-3.40/scratch/closure_energy.h": "7294c676b024cb8d53ef2a8f2783e12025405e1a383db81dca45904c7fbca793",
+    "/opt/ns-allinone-3.40/ns-3.40/scratch/closure_ingress.h": "8cb26f800c9cd7e030b1bc19d6660903f7b39217ae024deb34b9acef74382193",
+    "/opt/ns-allinone-3.40/ns-3.40/scratch/closure_mission.h": "b3d0c742bdb5117ee4037b0f9f6509e05f3948f2c7f3ad02d6499b2afe6e8e62",
+    "/opt/ns-allinone-3.40/ns-3.40/scratch/closure_mission_mobility.h": "0a771d54a40139db0f3d618fcdb3b5212b3b82dc1fea1b00238afac88fc54ccc",
+    "/opt/ns-allinone-3.40/ns-3.40/scratch/closure_optical.h": "5c400a016d3eeec06189c4d67d4df1e3c2df0bc4250de97fca615d15495d9b77",
+    "/opt/ns-allinone-3.40/ns-3.40/scratch/closure_phy.h": "cda23c6e6867d0959da636e5f33c71759e9ea0bfa4e1849518fa708a7df0def2",
+    "/opt/ns-allinone-3.40/ns-3.40/scratch/test_closure_phy.cc": "52bc25f6c4f58d75e0e8b6fd4e4a39e91409a7cd1dcca30e21060651846f1f2b",
+    "/opt/ns-allinone-3.40/ns-3.40/scratch/reviewed_optical_service.inc": "28fe0e831a84669589f33921a16db86a03fe1789883952bb34b3cf5f487afc0a"
+  },
+  "identities_stable": true,
+  "checks": [
+    {
+      "argv": [
+        "/opt/ns-allinone-3.40/ns-3.40/build/scratch/ns3.40-edc-reviewed-optimized",
+        "--reviewedSelfTest=1"
+      ],
+      "return_code": 0,
+      "stdout": "REVIEWED_SELF_TEST_PASS checks=58 version=reviewed-ack-v1 full_validation=false\n",
+      "stderr": "",
+      "passed": true,
+      "assertions": 58,
+      "elapsed_s": 0.04034320799996749
+    },
+    {
+      "argv": [
+        "/opt/ns-allinone-3.40/ns-3.40/build/scratch/ns3.40-edc-reviewed-optimized",
+        "--reviewedIngressSelfTest=1"
+      ],
+      "return_code": 0,
+      "stdout": "REVIEWED_INGRESS_SELF_TEST_PASS checks=35 full_validation=false network_runs=0 synthetic_parameters=true\n",
+      "stderr": "",
+      "passed": true,
+      "assertions": 35,
+      "elapsed_s": 0.02668491700001141
+    },
+    {
+      "argv": [
+        "/opt/ns-allinone-3.40/ns-3.40/build/scratch/ns3.40-edc-reviewed-optimized",
+        "--closureTransportSelfTest=1"
+      ],
+      "return_code": 0,
+      "stdout": "CLOSURE_TRANSPORT_SELF_TEST_PASS checks=20 version=transport-slice-v1 full_validation=false\n",
+      "stderr": "",
+      "passed": true,
+      "assertions": 20,
+      "elapsed_s": 0.025766125000018292
+    },
+    {
+      "argv": [
+        "/opt/ns-allinone-3.40/ns-3.40/build/scratch/ns3.40-edc-reviewed-optimized",
+        "--hardwareSelfTest=1"
+      ],
+      "return_code": 0,
+      "stdout": "HARDWARE_SELF_TEST_PASS checks=47\n",
+      "stderr": "",
+      "passed": true,
+      "assertions": 47,
+      "elapsed_s": 0.025068041999929846
+    },
+    {
+      "argv": [
+        "/opt/ns-allinone-3.40/ns-3.40/build/scratch/ns3.40-test_closure_phy-optimized"
+      ],
+      "return_code": 0,
+      "stdout": "REVIEWED_PHY_COMPONENT_PASS checks=17 network_runs=0 actual_frame_qa_pending=true\n",
+      "stderr": "PHY_TEST device_created\nPHY_TEST ledger_bound\nPHY_TEST rx_started\nPHY_TEST events_complete checks=17\nPHY_TEST disposed\n",
+      "passed": true,
+      "assertions": 17,
+      "elapsed_s": 0.025487375000011525
+    },
+    {
+      "argv": [
+        "/opt/ns-allinone-3.40/ns-3.40/build/scratch/ns3.40-edc-reviewed-optimized",
+        "--closureFullValidation=1"
+      ],
+      "return_code": -6,
+      "stdout": "",
+      "stderr": "aborted. cond=\"m_closureFullValidation\", msg=\"CLOSURE_NOT_READY: authoritative PHY-state energy, durable ingress, finite battery/route and adaptive-policy integration require independent validation\", file=/opt/ns-allinone-3.40/ns-3.40/scratch/edc-reviewed.cc, line=2192\nNS_FATAL, terminating\nterminate called without an active exception\n",
+      "passed": true,
+      "assertions": 0,
+      "elapsed_s": 0.024226915999861376
+    },
+    {
+      "argv": [
+        "/opt/ns-allinone-3.40/ns-3.40/build/scratch/ns3.40-edc-reviewed-optimized",
+        "--reviewedOpticalSelfTest=1"
+      ],
+      "return_code": 0,
+      "stdout": "REVIEWED_OPTICAL_SELF_TEST_PASS checks=15\n",
+      "stderr": "",
+      "passed": true,
+      "assertions": 15,
+      "elapsed_s": 0.02215937500000109
+    }
+  ],
+  "network_runs_executed": 0,
+  "full_physical_validation": false,
+  "campaign_launch_allowed": false,
+  "paper_performance_result": false
+}

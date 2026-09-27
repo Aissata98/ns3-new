@@ -1,0 +1,41 @@
+{
+  "schema": "closure-post-selection-subset-decision-v1",
+  "status": "author_approved_subset",
+  "author_authorized": true,
+  "reviewed_by": "root",
+  "authorization_context": "After the assistant explicitly proposed105 remaining D-P/H-S trials and requested authorization, the author instructed completion of the experiments followed by a blue-marked manuscript update, reviewer response and reproducible GitHub folder. Root interprets this follow-up as assent to the offered105-trial continuation; this scope was restated to the author. No replacement adaptive algorithm, relaxed criterion, extra seeds or public upload is authorized.",
+  "selection_sha256": "f23d89084b357756e2a2166cfff5239f1f9be75dcae7a94bce5413a9a0f5d097",
+  "model_sha256": "ff69c4f2c75b19763fbcf1b71a68ac322197e25753977c04e1137c6e1ddfa5da",
+  "manifest_sha256": "7dae88e79eaed6856e54fa2a6cc8ea81e486eb702724756088c982cae23dcb60",
+  "protocol_sha256": "7028da6167e3d9c0cf6c865ab6656e09429d1fdcd11f8a0eb7c018f3ce0ab27a",
+  "included_families": ["D-P", "H-S"],
+  "excluded_families": {
+    "H-A": {
+      "status": "no_physically_feasible_candidate",
+      "selected_candidate_id": null,
+      "diagnostic_candidate_id": null
+    }
+  },
+  "phase_run_counts": {
+    "confirmation": 20,
+    "transfer": 60,
+    "summary": 10,
+    "mechanism_ablation": 10,
+    "immediate_ablation": 5
+  },
+  "phase_original_full_recipe_counts": {
+    "confirmation": 30,
+    "transfer": 90,
+    "summary": 15,
+    "mechanism_ablation": 15,
+    "immediate_ablation": 10
+  },
+  "remaining_network_runs_authorized": 105,
+  "excluded_undefined_network_runs": 55,
+  "no_reallocation": true,
+  "tripartite_campaign_complete": false,
+  "manuscript_updates_authorized_after_results": true,
+  "public_upload_authorized": false,
+  "scientific_interpretation": "All three families remain represented in the complete195-run tuning grid. H-A has no admissible nominal representative and is explicitly not executed in held-out phases. H-S remains a service-infeasible diagnostic, not a feasible winner. The complete unchanged D-P/H-S subset is evaluated on the predeclared seeds and contexts; no held-out observation is used to tune controls.",
+  "nominal_ablation_pairing": "Original321-325 ablation seeds retained; no paired effect against311-320 nominal confirmation is claimed. Memory1MB FIFO ablations share321-325 seeds with their corresponding transfer baseline."
+}

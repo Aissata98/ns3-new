@@ -1,0 +1,42 @@
+{
+  "schema": "reviewed-v6-package-skeleton-checks-v1",
+  "checked_on": "2026-09-20",
+  "status": "passed_offline_only",
+  "command": "python3 -B -m unittest -v test_local_build.py test_replay.py",
+  "tests_passed": 41,
+  "test_seconds": 0.189,
+  "local_builder_tests": 14,
+  "replay_tests": 27,
+  "shell_driver_syntax_check": "passed",
+  "offline_local_plan": "passed",
+  "model_source_hash_check": "passed_11_files",
+  "docker_image_inspection": "read_only_exact_identity_arm64_linux",
+  "docker_builds": 0,
+  "docker_build_containers_created": 0,
+  "network_simulations": 0,
+  "source_model_changes": 0,
+  "large_results_copied": false,
+  "local_build_runtime_verified": false,
+  "local_build_status": "not_executed",
+  "scope_note": "Mocks and offline checks do not certify compilation or a new simulation. ARTIFACT_CHECKS.json preserves the earlier launcher check; its earlier README hash and licensing to-do are superseded by this README and the existing LICENSE/NOTICE, without changing the historical test record.",
+  "hashes": {
+    "local_build.py": "cf42cdd0406b6a430195391800e3218281c978a1a86c294b301462625541b319",
+    "local_build_driver.sh": "8fca32f21b52431117f3bf8b2b84f6e385ce45e2f563a14688cfebf855efaa41",
+    "Dockerfile.local": "d2947fad5bad5449405d09c96de28e86b5e3edc7028eff97b8d869fa398be171",
+    "LOCAL_BASE_IDENTITY.json": "3e78059d71bd53a054b735c1c865fe1c10362ddcb8357e6dc212d744aafd2ae4",
+    "README.md": "32fd7a4412664e95d6dbba4d1c7dd9be566c2e10c0e9bc4f77c52be6540970db",
+    "test_local_build.py": "fc5ef4779633cc47823049160f29fb3489f214fcddc669aeddcd4d8d1dd38902",
+    "RESULTS_ARCHIVE_CONTRACT.md": "d1388c72228694616e83a764e490febf71dd8e5ecc248bb29b8f430a7c1ef4e5"
+  },
+  "immutable_metadata_sha256": {
+    "config/HARDWARE_CONTRACT_V2.json": "6cdba29174625af00f5d7e4e0f10e5d3b329def733520852bc3674d0b76f299c",
+    "config/HARDWARE_LAUNCH_CONTRACT_V6.json": "ab482d9820f4a337a351945b0cab67eb40cbb5b2ec864978e187bc81a4726168",
+    "config/MANIFEST_EXPERIMENT.json": "7dae88e79eaed6856e54fa2a6cc8ea81e486eb702724756088c982cae23dcb60",
+    "config/POST_SELECTION_SCOPE_V6.json": "98d6c4a13c4e4c213a167c45e7ed73d24bcc834b82ff2857d169388f5644e09b",
+    "config/SELECTION_V6.json": "f23d89084b357756e2a2166cfff5239f1f9be75dcae7a94bce5413a9a0f5d097",
+    "config/protocol.json": "7028da6167e3d9c0cf6c865ab6656e09429d1fdcd11f8a0eb7c018f3ce0ab27a",
+    "provenance/BUILD_INTEGRATED_V6.json": "8bd39b9fd09bf567ee43644d8842fbdf1c9c0cf22ee89dc0a0c0858c63d0891f",
+    "provenance/KERNEL_TESTS_V6.json": "9df7c3d5c0666ab3345c115032ab1f00f5a14b5f52e1bc46b7e4350ef10db6a9",
+    "provenance/SELECTION_V6.json.receipt.json": "91c11e682ca98c3b0e71238310da08dfaf230c63ebb53133cf93d4c3c37a3aa8"
+  }
+}

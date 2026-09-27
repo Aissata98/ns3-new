@@ -1,0 +1,453 @@
+{
+  "candidates": [
+    {
+      "candidate_id": "D-P-r0",
+      "family": "D-P",
+      "medium_age_s": null,
+      "medium_refill_milli_records_per_s": null,
+      "medium_refill_records_per_s": null,
+      "retries": 0,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "D-P-r1",
+      "family": "D-P",
+      "medium_age_s": null,
+      "medium_refill_milli_records_per_s": null,
+      "medium_refill_records_per_s": null,
+      "retries": 1,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "D-P-r3",
+      "family": "D-P",
+      "medium_age_s": null,
+      "medium_refill_milli_records_per_s": null,
+      "medium_refill_records_per_s": null,
+      "retries": 3,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-S-r0-a060-q015",
+      "family": "H-S",
+      "medium_age_s": 60,
+      "medium_refill_milli_records_per_s": 15,
+      "medium_refill_records_per_s": 0.015,
+      "retries": 0,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-S-r0-a060-q020",
+      "family": "H-S",
+      "medium_age_s": 60,
+      "medium_refill_milli_records_per_s": 20,
+      "medium_refill_records_per_s": 0.02,
+      "retries": 0,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-S-r0-a060-q030",
+      "family": "H-S",
+      "medium_age_s": 60,
+      "medium_refill_milli_records_per_s": 30,
+      "medium_refill_records_per_s": 0.03,
+      "retries": 0,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-S-r0-a120-q015",
+      "family": "H-S",
+      "medium_age_s": 120,
+      "medium_refill_milli_records_per_s": 15,
+      "medium_refill_records_per_s": 0.015,
+      "retries": 0,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-S-r0-a120-q020",
+      "family": "H-S",
+      "medium_age_s": 120,
+      "medium_refill_milli_records_per_s": 20,
+      "medium_refill_records_per_s": 0.02,
+      "retries": 0,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-S-r0-a120-q030",
+      "family": "H-S",
+      "medium_age_s": 120,
+      "medium_refill_milli_records_per_s": 30,
+      "medium_refill_records_per_s": 0.03,
+      "retries": 0,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-S-r1-a060-q015",
+      "family": "H-S",
+      "medium_age_s": 60,
+      "medium_refill_milli_records_per_s": 15,
+      "medium_refill_records_per_s": 0.015,
+      "retries": 1,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-S-r1-a060-q020",
+      "family": "H-S",
+      "medium_age_s": 60,
+      "medium_refill_milli_records_per_s": 20,
+      "medium_refill_records_per_s": 0.02,
+      "retries": 1,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-S-r1-a060-q030",
+      "family": "H-S",
+      "medium_age_s": 60,
+      "medium_refill_milli_records_per_s": 30,
+      "medium_refill_records_per_s": 0.03,
+      "retries": 1,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-S-r1-a120-q015",
+      "family": "H-S",
+      "medium_age_s": 120,
+      "medium_refill_milli_records_per_s": 15,
+      "medium_refill_records_per_s": 0.015,
+      "retries": 1,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-S-r1-a120-q020",
+      "family": "H-S",
+      "medium_age_s": 120,
+      "medium_refill_milli_records_per_s": 20,
+      "medium_refill_records_per_s": 0.02,
+      "retries": 1,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-S-r1-a120-q030",
+      "family": "H-S",
+      "medium_age_s": 120,
+      "medium_refill_milli_records_per_s": 30,
+      "medium_refill_records_per_s": 0.03,
+      "retries": 1,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-S-r3-a060-q015",
+      "family": "H-S",
+      "medium_age_s": 60,
+      "medium_refill_milli_records_per_s": 15,
+      "medium_refill_records_per_s": 0.015,
+      "retries": 3,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-S-r3-a060-q020",
+      "family": "H-S",
+      "medium_age_s": 60,
+      "medium_refill_milli_records_per_s": 20,
+      "medium_refill_records_per_s": 0.02,
+      "retries": 3,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-S-r3-a060-q030",
+      "family": "H-S",
+      "medium_age_s": 60,
+      "medium_refill_milli_records_per_s": 30,
+      "medium_refill_records_per_s": 0.03,
+      "retries": 3,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-S-r3-a120-q015",
+      "family": "H-S",
+      "medium_age_s": 120,
+      "medium_refill_milli_records_per_s": 15,
+      "medium_refill_records_per_s": 0.015,
+      "retries": 3,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-S-r3-a120-q020",
+      "family": "H-S",
+      "medium_age_s": 120,
+      "medium_refill_milli_records_per_s": 20,
+      "medium_refill_records_per_s": 0.02,
+      "retries": 3,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-S-r3-a120-q030",
+      "family": "H-S",
+      "medium_age_s": 120,
+      "medium_refill_milli_records_per_s": 30,
+      "medium_refill_records_per_s": 0.03,
+      "retries": 3,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-A-r0-a060-q015",
+      "family": "H-A",
+      "medium_age_s": 60,
+      "medium_refill_milli_records_per_s": 15,
+      "medium_refill_records_per_s": 0.015,
+      "retries": 0,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-A-r0-a060-q020",
+      "family": "H-A",
+      "medium_age_s": 60,
+      "medium_refill_milli_records_per_s": 20,
+      "medium_refill_records_per_s": 0.02,
+      "retries": 0,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-A-r0-a060-q030",
+      "family": "H-A",
+      "medium_age_s": 60,
+      "medium_refill_milli_records_per_s": 30,
+      "medium_refill_records_per_s": 0.03,
+      "retries": 0,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-A-r0-a120-q015",
+      "family": "H-A",
+      "medium_age_s": 120,
+      "medium_refill_milli_records_per_s": 15,
+      "medium_refill_records_per_s": 0.015,
+      "retries": 0,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-A-r0-a120-q020",
+      "family": "H-A",
+      "medium_age_s": 120,
+      "medium_refill_milli_records_per_s": 20,
+      "medium_refill_records_per_s": 0.02,
+      "retries": 0,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-A-r0-a120-q030",
+      "family": "H-A",
+      "medium_age_s": 120,
+      "medium_refill_milli_records_per_s": 30,
+      "medium_refill_records_per_s": 0.03,
+      "retries": 0,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-A-r1-a060-q015",
+      "family": "H-A",
+      "medium_age_s": 60,
+      "medium_refill_milli_records_per_s": 15,
+      "medium_refill_records_per_s": 0.015,
+      "retries": 1,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-A-r1-a060-q020",
+      "family": "H-A",
+      "medium_age_s": 60,
+      "medium_refill_milli_records_per_s": 20,
+      "medium_refill_records_per_s": 0.02,
+      "retries": 1,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-A-r1-a060-q030",
+      "family": "H-A",
+      "medium_age_s": 60,
+      "medium_refill_milli_records_per_s": 30,
+      "medium_refill_records_per_s": 0.03,
+      "retries": 1,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-A-r1-a120-q015",
+      "family": "H-A",
+      "medium_age_s": 120,
+      "medium_refill_milli_records_per_s": 15,
+      "medium_refill_records_per_s": 0.015,
+      "retries": 1,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-A-r1-a120-q020",
+      "family": "H-A",
+      "medium_age_s": 120,
+      "medium_refill_milli_records_per_s": 20,
+      "medium_refill_records_per_s": 0.02,
+      "retries": 1,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-A-r1-a120-q030",
+      "family": "H-A",
+      "medium_age_s": 120,
+      "medium_refill_milli_records_per_s": 30,
+      "medium_refill_records_per_s": 0.03,
+      "retries": 1,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-A-r3-a060-q015",
+      "family": "H-A",
+      "medium_age_s": 60,
+      "medium_refill_milli_records_per_s": 15,
+      "medium_refill_records_per_s": 0.015,
+      "retries": 3,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-A-r3-a060-q020",
+      "family": "H-A",
+      "medium_age_s": 60,
+      "medium_refill_milli_records_per_s": 20,
+      "medium_refill_records_per_s": 0.02,
+      "retries": 3,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-A-r3-a060-q030",
+      "family": "H-A",
+      "medium_age_s": 60,
+      "medium_refill_milli_records_per_s": 30,
+      "medium_refill_records_per_s": 0.03,
+      "retries": 3,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-A-r3-a120-q015",
+      "family": "H-A",
+      "medium_age_s": 120,
+      "medium_refill_milli_records_per_s": 15,
+      "medium_refill_records_per_s": 0.015,
+      "retries": 3,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-A-r3-a120-q020",
+      "family": "H-A",
+      "medium_age_s": 120,
+      "medium_refill_milli_records_per_s": 20,
+      "medium_refill_records_per_s": 0.02,
+      "retries": 3,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    },
+    {
+      "candidate_id": "H-A-r3-a120-q030",
+      "family": "H-A",
+      "medium_age_s": 120,
+      "medium_refill_milli_records_per_s": 30,
+      "medium_refill_records_per_s": 0.03,
+      "retries": 3,
+      "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+    }
+  ],
+  "contexts": [],
+  "hardware_gate": {
+    "accepted_plan_sha256": null,
+    "evidence_sha256": {},
+    "hardware_identity_scope": "exact_HARDWARE_CONTRACT_file_bytes",
+    "hardware_sha256": null,
+    "model_sha256": null,
+    "preflight_max_age_seconds": 120.0,
+    "preflight_report_sha256": null,
+    "required_checks": [
+      "acoustic_physical_family_and_range",
+      "reverse_ack_and_retry_semantics",
+      "complete_state_energy_and_finite_batteries",
+      "finite_ingress_storage_and_conservation",
+      "continuous_route_contact_and_safe_return",
+      "causal_planner_and_control_telemetry",
+      "paired_input_and_outcome_audit",
+      "compiled_model_and_regression"
+    ],
+    "status": "blocked"
+  },
+  "machine_limits": {
+    "cpus": 2,
+    "memory_gib": 6,
+    "minimum_start_free_bytes": 4294967296,
+    "pause_between_runs_s": 0.5,
+    "per_run_stop_free_bytes": 1500000000,
+    "scope": "shared_envelope_at_most_two_isolated_workers",
+    "workers": 2
+  },
+  "manifest_sha256": "85a61fd4669648308bd12fd9d9d8a39ee85a983d7da21882fb6fc68be8a5888c",
+  "phases": {
+    "confirmation": 30,
+    "immediate_ablation": 15,
+    "mechanism_ablation": 15,
+    "qa": 20,
+    "summary": 15,
+    "technical_retry": 20,
+    "transfer": 90,
+    "tuning": 195
+  },
+  "schema_version": "sensors-closure-protocol-v2",
+  "seeds": {
+    "confirmation": [
+      311,
+      312,
+      313,
+      314,
+      315,
+      316,
+      317,
+      318,
+      319,
+      320
+    ],
+    "transfer": [
+      321,
+      322,
+      323,
+      324,
+      325
+    ],
+    "tuning": [
+      301,
+      302,
+      303,
+      304,
+      305
+    ]
+  },
+  "selection": {
+    "aggregation": "unweighted_mean_of_per_run_mature_cohort_ratios",
+    "infeasible_diagnostic": "minimum_max_positive_normalized_service_violation_among_physical_candidates",
+    "limits": {
+      "high_miss_fraction": 0.01,
+      "low_window_miss_fraction": 0.05,
+      "medium_miss_fraction": 0.05
+    },
+    "metric_units": "fractions_0_to_1_and_joules",
+    "order": [
+      "all_runs_physically_feasible_and_mean_service_within_limits",
+      "immersed_energy_j",
+      "full_mission_energy_j",
+      "candidate_id"
+    ],
+    "reselect_on_confirmation_or_transfer": false,
+    "selection_data": "nominal_tuning_only_complete_195_runs"
+  },
+  "status": "protocol_frozen_hardware_pending",
+  "total_run_cap": 400,
+  "transfer_contexts": [
+    "load",
+    "long",
+    "sparse",
+    "raw32",
+    "memory1mb",
+    "perturbed"
+  ]
+}

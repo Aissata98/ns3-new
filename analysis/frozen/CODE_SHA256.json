@@ -1,0 +1,12 @@
+{
+  "files": {
+    "finalization/select_campaign_representatives.py": "ac7f5d2f94d6a346705104a0e0e87d7aad82d863f0c40a6c77857ee96b847224",
+    "finalization/summarize_final_campaign.py": "d1b7615ac7eaf6e988bd7bd07ffaaa4680888d60077899a7985372c70e0edf31",
+    "sim/closure_campaign_audit.py": "cd014f2a7876e4bf1df04c479e07ed2431f7a6f65bb5ce96b4315d84274df2b8",
+    "sim/closure_campaign_worker.py": "932ee8d735c836e7739a4926b2e7a48c70b35307ea268698b33f3933b58dbfa0",
+    "sim/closure_protocol.py": "4b3b46bcfaaa17fa85430f8a81cf6a7937a4d88be47004cbadf51d1aad502961",
+    "sim/hardware_preflight.py": "897b3153104d3895caeeb7bca18a08f879c077cb7a7746eb25fa19ba195513ae",
+    "sim/run_closure_campaign.py": "d90f63ba3cd4ecc2ba42f0bbae09f0b3dd8b7d9b2eebb5c0145f7178cf91b58c"
+  },
+  "schema": "closure-offline-code-v1"
+}

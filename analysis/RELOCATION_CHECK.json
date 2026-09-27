@@ -1,0 +1,38 @@
+{
+  "all_numerics_intervals_and_original_logical_provenance_identical": true,
+  "completed_network_observations_read": 20,
+  "dataset": "confirmation-v6",
+  "frozen_code": {
+    "files": {
+      "finalization/select_campaign_representatives.py": "ac7f5d2f94d6a346705104a0e0e87d7aad82d863f0c40a6c77857ee96b847224",
+      "finalization/summarize_final_campaign.py": "d1b7615ac7eaf6e988bd7bd07ffaaa4680888d60077899a7985372c70e0edf31",
+      "sim/closure_campaign_audit.py": "cd014f2a7876e4bf1df04c479e07ed2431f7a6f65bb5ce96b4315d84274df2b8",
+      "sim/closure_campaign_worker.py": "932ee8d735c836e7739a4926b2e7a48c70b35307ea268698b33f3933b58dbfa0",
+      "sim/closure_protocol.py": "4b3b46bcfaaa17fa85430f8a81cf6a7937a4d88be47004cbadf51d1aad502961",
+      "sim/hardware_preflight.py": "897b3153104d3895caeeb7bca18a08f879c077cb7a7746eb25fa19ba195513ae",
+      "sim/run_closure_campaign.py": "d90f63ba3cd4ecc2ba42f0bbae09f0b3dd8b7d9b2eebb5c0145f7178cf91b58c"
+    },
+    "schema": "closure-offline-code-v1"
+  },
+  "ignored_comparison_fields": [
+    "created_at_utc",
+    "script_sha256"
+  ],
+  "immutable_files_verified_before_and_after": 440,
+  "lookup_counts": {
+    "archive_reads": 996,
+    "code_reads": 1,
+    "output_accesses": 2
+  },
+  "network_runs_started": 0,
+  "original_lookup_fallback": false,
+  "reference_summary_sha256": "9e27a2fc5ca01bde7c0840c5a3030d4c1324ae4138e0138439f6dbe64529566f",
+  "relocated_outside_original_workspace": true,
+  "reproduced_summary_sha256": "329585819b31ea0ef1a1441923e618388e63aadfb0133a1090d27d71298431a7",
+  "schema": "closure-offline-relocation-check-v1",
+  "semantic_summary_sha256": "ce83e9123a92d32142169e479dd9cb6330740d642ad8fcb88cb51fa56f19fa4a",
+  "status": "passed",
+  "temporary_test_copy_retained": false,
+  "unit_tests_passed": 12,
+  "wrapper_sha256": "ccbb2dad5505ab578e98b9c9acf1d6e34b14cf23278ef92fef80495cd65528dd"
+}

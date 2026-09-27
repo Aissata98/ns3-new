@@ -1,0 +1,18 @@
+{
+  "schema": "reviewed-v6-local-base-identity-v1",
+  "image_tag": "edc-ns3:3.40",
+  "image_id": "sha256:8c3617e52391cccae3a7b9eda8bfa8dbd2922fc021ac2708108b0978ef7cf2aa",
+  "architecture": "arm64",
+  "os": "linux",
+  "image_identity_observed_on": "2026-09-20",
+  "dependency_fingerprint_origin": "Read-only observation in the existing sensors-revision-20260919 campaign container. The local rebuild must independently verify these against its base before compiling.",
+  "ns3_version": "3.40",
+  "aqua_sim_commit": "0fbc166b8b12cf711f14379cb159393d8061e3a6",
+  "ns3_files": {
+    "VERSION": "9574ce92e9fc7a0c525f8239506d3a984f3db5d756a3cce08eba583977d56bda",
+    "ns3": "63867917843612fd40ceb04a07c1a2339b8c75bd5e25f8577a253b0f102ed2be",
+    "src/core/model/simulator.cc": "7a28075ea2c9d8dc1cb9596ef582d688867a89728265665fed81c23e24379dac",
+    "src/core/model/simulator-impl.cc": "fd7cac095563fce184e40c19ad074dde0f08060f77b22e7310607d69d8b95a77"
+  },
+  "scope": "Pinned local image identity plus selected ns-3 source fingerprints and clean tracked Aqua-Sim source; not a full ns-3 source-tree attestation or field validation. No build has yet checked this recipe."
+}

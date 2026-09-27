@@ -1,0 +1,255 @@
+{
+  "schema_version": 1,
+  "scope": "approved_closure_plan_new_runs_only",
+  "updated_date": "2026-09-20",
+  "maximum_network_runs": 400,
+  "protocol_path": "PROTOCOL_V2.json",
+  "protocol_sha256": "7028da6167e3d9c0cf6c865ab6656e09429d1fdcd11f8a0eb7c018f3ce0ab27a",
+  "network_runs_executed": 319,
+  "scientific_tuning_runs_executed": 195,
+  "phase_usage": {
+    "tuning": {
+      "cap": 195,
+      "executed": 195
+    },
+    "confirmation": {
+      "cap": 30,
+      "executed": 20
+    },
+    "transfer": {
+      "cap": 90,
+      "executed": 60
+    },
+    "summary": {
+      "cap": 15,
+      "executed": 10
+    },
+    "mechanism_ablation": {
+      "cap": 15,
+      "executed": 10
+    },
+    "qa": {
+      "cap": 20,
+      "executed": 19
+    },
+    "immediate_ablation": {
+      "cap": 15,
+      "executed": 5
+    },
+    "technical_retry": {
+      "cap": 20,
+      "executed": 0
+    }
+  },
+  "batches": [
+    {
+      "path": "network-qa-v1/QA_REPORT.json",
+      "sha256": "eafa27b8bd5cf3bd98806c54996be52ffcc75433ab280cf0e76e8545e4b1b15b",
+      "phase": "qa",
+      "runs": 3,
+      "status": "passed",
+      "meaning": "Two legacy parity cases and one deliberately disconnected synthetic transport case; not a physical validation or paper performance result."
+    },
+    {
+      "path": "finalization/ack-network-qa-v1/QA_REPORT.json",
+      "sha256": "ec6e03cee62dda738e12a306f016297be5498e98ba285b7e05e0d4254513d7df",
+      "phase": "qa",
+      "runs": 4,
+      "status": "failed",
+      "meaning": "Frozen ACK checkpoint: reverse ACK, reverse-range loss and multi-hop return passed. The short-timeout scenario preserved one delivery and conservation but exhausted before ACK confirmation, contrary to the runner's overstrong expectation; original failed receipt retained. All four launched runs count. Not paper performance or full physical validation."
+    },
+    {
+      "path": "finalization/confirmation-v6/phase-receipt.json",
+      "sha256": "d5d26267e83145957ff856a808e23895e7d0700b6af59554b040ba92ade5c290",
+      "phase": "confirmation",
+      "runs": 20,
+      "status": "passed_authorized_two_family_subset",
+      "three_family_phase_complete": false
+    },
+    {
+      "path": "finalization/transfer-v6/phase-receipt.json",
+      "sha256": "56b2519f0f42f1a5fe8c00ea7a1441c172ad65e61a71ce74dffe6a664ad5ddf9",
+      "phase": "transfer",
+      "runs": 30,
+      "status": "interrupted_host_disk_guard",
+      "meaning": "First30 frozen transfer jobs passed. Job030 stopped before launch with charge0 at the unchanged4GiB host start floor. No scientific failure and no successful run to be repeated.",
+      "three_family_phase_complete": false
+    },
+    {
+      "path": "finalization/transfer-v6-resume/phase-receipt.json",
+      "sha256": "87eb112d835ab42d7229711092c235bf6ed3272138152c7f0a8bb8084f41bb18",
+      "phase": "transfer",
+      "runs": 30,
+      "status": "passed_authorized_two_family_subset",
+      "three_family_phase_complete": false
+    },
+    {
+      "path": "finalization/summary-v6/phase-receipt.json",
+      "sha256": "1fb7503d004da91263b36ac5c63a7d5642b4f57e2815f1806803b30d75754af6",
+      "phase": "summary",
+      "runs": 10,
+      "status": "passed_authorized_two_family_subset",
+      "three_family_phase_complete": false
+    },
+    {
+      "path": "finalization/mechanism-ablation-v6/phase-receipt.json",
+      "sha256": "3b2e3d991eb596d0bbef484b831f4e011a9d7e24c0f60f01fa9e0541c9ad7ef7",
+      "phase": "mechanism_ablation",
+      "runs": 10,
+      "status": "passed_authorized_two_family_subset",
+      "three_family_phase_complete": false
+    },
+    {
+      "path": "finalization/immediate-ablation-v6/phase-receipt.json",
+      "sha256": "e9893bb22ec8d4df2288d11166b5d56aeeaa272b23ebebb71f22d20d642167a0",
+      "phase": "immediate_ablation",
+      "runs": 5,
+      "status": "passed_authorized_two_family_subset",
+      "three_family_phase_complete": false
+    }
+  ],
+  "component_tests_excluded_from_network_count": {
+    "python_tests_passed": 134,
+    "compiled_transport_assertions_passed": 20,
+    "compiled_reviewed_ack_assertions_passed": 22,
+    "reviewed_ack_build_receipt_path": "finalization/ACK_CHECKPOINT_BUILD_RECEIPT.json",
+    "reviewed_ack_build_receipt_sha256": "db9699067e7c0aaa37db99b48f76a0ce0236b6534feae9864590d6bfa862fe59",
+    "compiled_legacy_assertions_passed": 47,
+    "full_validation_rejection_check_passed": true
+  },
+  "energy_qa_original_batch": {
+    "path": "finalization/energy-network-qa-v1",
+    "runs": 2,
+    "both_processes_executed": true,
+    "status": "failed",
+    "runner_assessment_error": "Second case referenced missing CSV column acousticDelivered. Original outputs preserved; original second process return code remains unknown.",
+    "secondary_assessment_path": "finalization/ENERGY_QA_SECONDARY_ASSESSMENT_V2.json",
+    "secondary_assessment_sha256": "0b3ba8da5fc6d09bf54f2370741a93bf26457bcc0da8db1f4147975cc8cbf0d7",
+    "meaning": "Both executions charged. Secondary read-only accounting checks pass, but the powered reverse ACK genuinely failed before the receiver-duration correction."
+  },
+  "corrected_energy_qa_batch": {
+    "path": "finalization/energy-network-qa-v2/QA_REPORT.json",
+    "sha256": "198179a21b8f4639e104a12b1b87ad778d3fc03b14d5d73e28ac8a9d0fadfc5b",
+    "runs": 2,
+    "status": "passed",
+    "meaning": "After restoring emitter waveform duration instead of overwritten propagation delay: powered DATA and real reverse ACK pass; mid-emission depletion prevents delivery. Synthetic correctness evidence, not paper performance."
+  },
+  "mission_qa_first_batch": {
+    "path": "finalization/mission-network-qa-v1/QA_REPORT.json",
+    "sha256": "09f78df57645b8f857aeac6136bab949af5c88e51cc92387f23a5bc2aa3806af",
+    "runs": 1,
+    "status": "failed",
+    "meaning": "First empty mission process failed; the runner correctly did not launch the LOW-window case. Charged even though not a scientific result."
+  },
+  "mission_qa_corrected_return_batch": {
+    "path": "finalization/mission-network-qa-v2/QA_REPORT.json",
+    "sha256": "82311cbc690915287f9b0f844527b825c42dc6900b5f07f1c2cfe9e51fc14ebf",
+    "runs": 2,
+    "status": "passed_with_explicit_coverage_limits",
+    "meaning": "Empty and one-LOW-record synthetic mission checks pass after retaining the admitted return suffix. LOW reaches the surface, but sender confirmation is absent and custody terminates through explicit abandonment. This is not a confirmed end-to-end transfer nor paper performance."
+  },
+  "mission_low_confirmed_batch": {
+    "path": "finalization/mission-low-network-qa-v3/QA_REPORT.json",
+    "sha256": "c50a7f20b13015c7ff8301fb18251a060d6d82487716d90b72761e7bfac4cf9d",
+    "runs": 1,
+    "status": "passed",
+    "meaning": "Same LOW case inputs as v2; fixed ACK clock starts after actual local transmissions. One received record, real final ACK, no retry/abandon, source/queue/carry accounting and return pass. Synthetic regression; optical confirmation still idealized at this checkpoint."
+  },
+  "previous_integrated_build_v4": {
+    "path": "finalization/BUILD_INTEGRATED_V4.json",
+    "sha256": "2aaf6ced3fd8848b9c5585dccb86676c81714a299eaf01ef3ae363e8793d6a22",
+    "status": "passed",
+    "source_sha256": "44ac1924bc732ef5272af73819b9ba242827736f713a61770563a76e5f0a43b5",
+    "binary_sha256": "a4da2a9ffe5249d011cfd7ec07e5aa8d22682a5d509fbf568f4bcb471dbbc3c1",
+    "compiled_assertions": {
+      "ack": 26,
+      "ingress": 18,
+      "transport": 20,
+      "legacy": 47,
+      "phy": 17
+    },
+    "full_validation_rejection_check_passed": true,
+    "network_runs": 0
+  },
+  "previous_integrated_build_v5": {
+    "path": "finalization/BUILD_INTEGRATED_V5.json",
+    "sha256": "c8ca020f20c5a1b17d80007984d9697f7c165a44fd511afc6806e0c362e9b666",
+    "status": "passed",
+    "source_sha256": "4b90fa915a750ed482db34b55f3f7d244081fb5cb222abe136c7b40e81e3395a",
+    "binary_sha256": "839f68e3bfce1ddc274de39ad420649f50742aa6cd951f63f87ba09a64c22f2c",
+    "compiled_assertions": {
+      "ack": 36,
+      "ingress": 18,
+      "transport": 20,
+      "legacy": 47,
+      "phy": 17
+    },
+    "full_validation_rejection_check_passed": true,
+    "network_runs": 0,
+    "isolated_snapshot": "finalization/ack-v5-checkpoint",
+    "working_tree_may_contain_later_unvalidated_integration": true
+  },
+  "remaining_runs_are_a_ceiling_not_a_target": true,
+  "scientific_tuning_v6": {
+    "path": "finalization/tuning-v6/phase-receipt.json",
+    "sha256": "273ed34b85ccddc76cfa82493208588759c6eb8a1cb86e47f9b7ea5b9c315b19",
+    "runs": 195,
+    "phase": "tuning",
+    "status": "passed_accounting_complete_grid",
+    "selection_path": "finalization/SELECTION_V6.json",
+    "selection_sha256": "f23d89084b357756e2a2166cfff5239f1f9be75dcae7a94bce5413a9a0f5d097",
+    "meaning": "All39 candidates times five paired training seeds301-305 completed on unchangedV6. All195 software accounting/storage/trajectory audits passed. D-P-r3 meets mean study service thresholds; H-S-r0-a120-q030 is a service-infeasible diagnostic; no H-A candidate meets mission feasibility across training seeds. No held-out confirmation or transfer has been launched. Author decision requested before a reduced two-family continuation."
+  },
+  "integrated_pilot_v6_resume": {
+    "path": "finalization/pilot-v6-resume/phase-receipt.json",
+    "sha256": "0965383329d05aab7cf7b9018941060b84a592f571f4639c5b4314584efb4802",
+    "runs": 2,
+    "phase": "qa",
+    "status": "passed_accounting",
+    "meaning": "Interrupted D-P and never-started H-A executed on unchangedV6/input/seed. Both full-horizon processes and accounting pass; H-S retained by read-only reassessment. H-A covers only4/8 sites and is not mission-feasible for selection. This policy limitation is under review before tuning; poor service is not converted to a software error or hidden."
+  },
+  "integrated_pilot_v6_first_dispatch": {
+    "path": "finalization/pilot-v6/phase-receipt.json",
+    "sha256": "bddb249cc0ec9c57bcffb1152dec34fc7ebd8693b3ded2a34ed01fcd8014d867",
+    "runs": 2,
+    "phase": "qa",
+    "status": "failed_analysis_guard",
+    "meaning": "H-S completed at full horizon in3.337s; audit incorrectly inferred final ACK legs from sinkIndex and stopped the shared phase. D-P was interrupted after actual start and counts; H-A was not launched. Source/model unchanged. Preserve original receipts, correct only the independent ACK analysis, reassess completed H-S without rerunning, then execute only interrupted D-P and missing H-A under a fresh reservation."
+  },
+  "latest_integrated_build": {
+    "path": "finalization/BUILD_INTEGRATED_V6.json",
+    "sha256": "8bd39b9fd09bf567ee43644d8842fbdf1c9c0cf22ee89dc0a0c0858c63d0891f",
+    "status": "passed",
+    "source_sha256": "7505249bf0b6ff5b1c2d2fb5881b8a3cee96260ee56e4d16ee56a72ad16708ac",
+    "binary_sha256": "ff69c4f2c75b19763fbcf1b71a68ac322197e25753977c04e1137c6e1ddfa5da",
+    "compiled_assertions": {
+      "ack_control": 58,
+      "ingress": 35,
+      "optical": 15,
+      "transport": 20,
+      "legacy": 47,
+      "phy": 17
+    },
+    "full_validation_rejection_check_passed": true,
+    "network_runs": 0,
+    "isolated_snapshot": "finalization/integrated-v6-checkpoint",
+    "meaning": "Integrated software checkpoint after explicit HIGH/MED/LOW cable priority mapping correction. All component checks passed; actual paired pilot remains required."
+  },
+  "campaign_launch_allowed": false,
+  "full_physical_validation": false,
+  "container_state_after_qa": "stopped",
+  "container_state_note": "Authorized two-family continuation complete:105 held-out performance runs;300 performance runs including195 training,19 network QA,319 total. Container stopped. No further simulations authorized or scheduled by this completion.",
+  "retained_cpu_limit": 2,
+  "retained_memory_limit_bytes": 4294967296,
+  "manuscript_changed": true,
+  "historical_results_changed": false,
+  "authorized_post_selection_scope": {
+    "path": "finalization/POST_SELECTION_SCOPE_V6.json",
+    "sha256": "98d6c4a13c4e4c213a167c45e7ed73d24bcc834b82ff2857d169388f5644e09b"
+  },
+  "authorized_executable_scope_complete": true,
+  "tripartite_campaign_complete": false,
+  "final_summary_path": "finalization/FINAL_SUMMARY_V6.json",
+  "final_summary_sha256": "2740398b5bab50daae09f1d6e5e7702e607f4f99f49b89eca0efadcd5bbf06ac",
+  "manuscript_change_scope": "New revision copy only in sensors-20260920-final-package/manuscript; submitted PDF and original sources retained unchanged."
+}

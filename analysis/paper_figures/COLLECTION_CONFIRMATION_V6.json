@@ -1,0 +1,2814 @@
+{
+  "definitions": {
+    "accepted_acoustic_wake_sessions": "Actual kind-2 receive events, checked equal to accepted-wake counter. Not geometric contact intervals; sessions may contain no new DATA.",
+    "aggregation": "Arithmetic mean, minimum and maximum of ten run-level counts or sums; ranges are not confidence intervals.",
+    "mission_end_including_recovery_s": "Last checked return/offload trajectory end plus declared 600-s external recovery; not deck recovery physics.",
+    "optical_ack_timeout_events": "Timeout occurrences before sender confirmation; may repeat per record. These do not identify individual lost ACK packets.",
+    "optical_data_serialization_sum_s": "Sum of all attempted optical payload + 69-byte descriptor airtime at 2.5 Mbit/s, including duplicate attempts; excludes propagation, wake/ACK, startup and waiting.",
+    "optical_first_received_records": "Unique optical_rx identities: new AUV receiver commitment, not sender ACK. LOW rows are chunks; other rows are individual records.",
+    "optical_received_not_sender_confirmed_at_end": "Unique optically received IDs minus IDs with an actual optical_sender_confirmed event, including preserved received copies whose sender abandons waiting.",
+    "sessions": "Optical events uniquely assigned to the matching gateway's accepted wake interval: received wake to request time + declared 30-s listen cap. Not measured continuously usable contact duration.",
+    "surface_complete_low_windows": "All required source chunks received via explicit final DATA leg=2/4; timely mature additionally uses oldest sample + 30000 s <= horizon and completion <= deadline.",
+    "surface_vehicle_sender_confirmed_records_aggregate": "Explicit auvSurfaceAcks final-leg aggregate, not per-record ACK identities reconstructed from sinkIndex."
+  },
+  "metrics": {
+    "accepted_acoustic_wake_sessions": {
+      "max": 18,
+      "mean": 17.8,
+      "min": 16
+    },
+    "completed_gateway_visits": {
+      "max": 9,
+      "mean": 9,
+      "min": 9
+    },
+    "distinct_visited_gateways": {
+      "max": 8,
+      "mean": 8,
+      "min": 8
+    },
+    "gateway_capacity_evictions": {
+      "max": 0,
+      "mean": 0,
+      "min": 0
+    },
+    "low_windows_acquired_before_mission_end": {
+      "max": 805,
+      "mean": 805,
+      "min": 805
+    },
+    "low_windows_generated": {
+      "max": 2440,
+      "mean": 2440,
+      "min": 2440
+    },
+    "low_windows_mature": {
+      "max": 1648,
+      "mean": 1648,
+      "min": 1648
+    },
+    "mission_end_including_recovery_s": {
+      "max": 30450.4976289947,
+      "mean": 30450.4976289947,
+      "min": 30450.4976289947
+    },
+    "optical_ack_timeout_events": {
+      "max": 26,
+      "mean": 25.6,
+      "min": 24
+    },
+    "optical_complete_low_windows_received": {
+      "max": 18,
+      "mean": 13.9,
+      "min": 10
+    },
+    "optical_credit_or_cache_rejections": {
+      "max": 0,
+      "mean": 0,
+      "min": 0
+    },
+    "optical_data_attempted_wire_bytes": {
+      "max": 1169765,
+      "mean": 1075205.1,
+      "min": 911075
+    },
+    "optical_data_attempts": {
+      "max": 65,
+      "mean": 53.5,
+      "min": 47
+    },
+    "optical_data_loss_events": {
+      "max": 0,
+      "mean": 0,
+      "min": 0
+    },
+    "optical_data_serialization_sum_s": {
+      "max": 3.743248,
+      "mean": 3.44065632,
+      "min": 2.91544
+    },
+    "optical_duplicate_data_receipts": {
+      "max": 18,
+      "mean": 17.5,
+      "min": 15
+    },
+    "optical_first_received_all_payload_bytes": {
+      "max": 799280,
+      "mean": 673213.6,
+      "min": 535832
+    },
+    "optical_first_received_low_chunks": {
+      "max": 42,
+      "mean": 34.7,
+      "min": 27
+    },
+    "optical_first_received_low_payload_bytes": {
+      "max": 798000,
+      "mean": 672900,
+      "min": 535000
+    },
+    "optical_first_received_records": {
+      "max": 47,
+      "mean": 36,
+      "min": 31
+    },
+    "optical_received_not_sender_confirmed_at_end": {
+      "max": 9,
+      "mean": 8.8,
+      "min": 8
+    },
+    "optical_received_sender_copies_abandoned": {
+      "max": 8,
+      "mean": 7.8,
+      "min": 7
+    },
+    "optical_sender_confirmed_records": {
+      "max": 38,
+      "mean": 27.2,
+      "min": 23
+    },
+    "optical_unreceived_pending_records": {
+      "max": 8,
+      "mean": 6.7,
+      "min": 5
+    },
+    "optical_unreceived_records_abandoned": {
+      "max": 0,
+      "mean": 0,
+      "min": 0
+    },
+    "optically_received_not_at_surface_by_end_records": {
+      "max": 2,
+      "mean": 0.3,
+      "min": 0
+    },
+    "sessions_with_new_optical_data": {
+      "max": 11,
+      "mean": 9.8,
+      "min": 9
+    },
+    "sessions_without_new_optical_data": {
+      "max": 9,
+      "mean": 8,
+      "min": 7
+    },
+    "surface_all_received_records": {
+      "max": 1825,
+      "mean": 1784,
+      "min": 1747
+    },
+    "surface_complete_low_windows_all": {
+      "max": 18,
+      "mean": 13.8,
+      "min": 9
+    },
+    "surface_complete_low_windows_mature_timely": {
+      "max": 18,
+      "mean": 13.8,
+      "min": 9
+    },
+    "surface_received_low_chunk_payload_bytes": {
+      "max": 798000,
+      "mean": 665400,
+      "min": 510000
+    },
+    "surface_received_low_chunks": {
+      "max": 42,
+      "mean": 34.4,
+      "min": 26
+    },
+    "surface_vehicle_received_records": {
+      "max": 47,
+      "mean": 35.7,
+      "min": 30
+    },
+    "surface_vehicle_received_without_confirmation_aggregate": {
+      "max": 3,
+      "mean": 1,
+      "min": 0
+    },
+    "surface_vehicle_sender_confirmed_records_aggregate": {
+      "max": 44,
+      "mean": 34.7,
+      "min": 30
+    },
+    "wake_requests_sent": {
+      "max": 18,
+      "mean": 18,
+      "min": 18
+    }
+  },
+  "n_seeds": 10,
+  "network_runs_started": 0,
+  "runs": [
+    {
+      "input_sha256": {
+        "audit": "6d802e6f1fe594a4de4f841f2a4ce19e7891206a146ee2eca87d170b761bda9f",
+        "job": "e2d91444785a1097adbb8411e3a77b965bef69c431b677a41cea80ba08282039",
+        "mission": "db9fe11811e5a0dfd43ba7f8782b071989a5c20bd17badb8b18c4e251b8b93c2",
+        "packets": "0ffebb766d439f11bd5299657431704e896f9fb5f15e9136220c1cff27264c81",
+        "run_result": "faf2de1b8fe823c4e7687bcb84831192c193fcda6a0dea58c940c2cac8f993e7",
+        "storage": "708f57b7c06483a4256fe07e34f1314b23089d9ef7e91a645e70368187ec82bf",
+        "workload": "a46f0e2f7412da2bbfa1bf26853e6c7c1bd2c262075d26d3e93b8b2031fda3d4"
+      },
+      "metrics": {
+        "accepted_acoustic_wake_sessions": 18,
+        "completed_gateway_visits": 9,
+        "distinct_visited_gateways": 8,
+        "gateway_capacity_evictions": 0,
+        "low_windows_acquired_before_mission_end": 805,
+        "low_windows_generated": 2440,
+        "low_windows_mature": 1648,
+        "mission_end_including_recovery_s": 30450.4976289947,
+        "optical_ack_timeout_events": 26,
+        "optical_complete_low_windows_received": 18,
+        "optical_credit_or_cache_rejections": 0,
+        "optical_data_attempted_wire_bytes": 1169765,
+        "optical_data_attempts": 65,
+        "optical_data_loss_events": 0,
+        "optical_data_serialization_sum_s": 3.743248,
+        "optical_duplicate_data_receipts": 18,
+        "optical_first_received_all_payload_bytes": 799280,
+        "optical_first_received_low_chunks": 42,
+        "optical_first_received_low_payload_bytes": 798000,
+        "optical_first_received_records": 47,
+        "optical_received_not_sender_confirmed_at_end": 9,
+        "optical_received_sender_copies_abandoned": 7,
+        "optical_sender_confirmed_records": 38,
+        "optical_unreceived_pending_records": 5,
+        "optical_unreceived_records_abandoned": 0,
+        "optically_received_not_at_surface_by_end_records": 0,
+        "sessions_with_new_optical_data": 11,
+        "sessions_without_new_optical_data": 7,
+        "surface_all_received_records": 1806,
+        "surface_complete_low_windows_all": 18,
+        "surface_complete_low_windows_mature_timely": 18,
+        "surface_received_low_chunk_payload_bytes": 798000,
+        "surface_received_low_chunks": 42,
+        "surface_vehicle_received_records": 47,
+        "surface_vehicle_received_without_confirmation_aggregate": 3,
+        "surface_vehicle_sender_confirmed_records_aggregate": 44,
+        "wake_requests_sent": 18
+      },
+      "path": "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization/confirmation-v6/010-nominal-H-S-r0-a120-q030-s311",
+      "seed": 311,
+      "sessions": [
+        {
+          "advertised_until_s": 885.0,
+          "data_attempts": 7,
+          "gateway": 0,
+          "new_record_ids": [
+            39,
+            8,
+            9,
+            28,
+            29
+          ],
+          "nonce": 1,
+          "receipt_s": 855.397942,
+          "request_s": 855.0
+        },
+        {
+          "advertised_until_s": 915.0,
+          "data_attempts": 0,
+          "gateway": 0,
+          "new_record_ids": [],
+          "nonce": 2,
+          "receipt_s": 903.264972,
+          "request_s": 885.0
+        },
+        {
+          "advertised_until_s": 3343.0,
+          "data_attempts": 5,
+          "gateway": 1,
+          "new_record_ids": [
+            10,
+            11,
+            30
+          ],
+          "nonce": 3,
+          "receipt_s": 3313.398642,
+          "request_s": 3313.0
+        },
+        {
+          "advertised_until_s": 3373.0,
+          "data_attempts": 0,
+          "gateway": 1,
+          "new_record_ids": [],
+          "nonce": 4,
+          "receipt_s": 3358.398214,
+          "request_s": 3343.0
+        },
+        {
+          "advertised_until_s": 5802.0,
+          "data_attempts": 5,
+          "gateway": 2,
+          "new_record_ids": [
+            14,
+            15,
+            32
+          ],
+          "nonce": 5,
+          "receipt_s": 5772.398244,
+          "request_s": 5772.0
+        },
+        {
+          "advertised_until_s": 5832.0,
+          "data_attempts": 0,
+          "gateway": 2,
+          "new_record_ids": [],
+          "nonce": 6,
+          "receipt_s": 5817.397808,
+          "request_s": 5802.0
+        },
+        {
+          "advertised_until_s": 8261.0,
+          "data_attempts": 5,
+          "gateway": 3,
+          "new_record_ids": [
+            17,
+            18,
+            34
+          ],
+          "nonce": 7,
+          "receipt_s": 8231.397847,
+          "request_s": 8231.0
+        },
+        {
+          "advertised_until_s": 8291.0,
+          "data_attempts": 0,
+          "gateway": 3,
+          "new_record_ids": [],
+          "nonce": 8,
+          "receipt_s": 8276.397401,
+          "request_s": 8261.0
+        },
+        {
+          "advertised_until_s": 10719.0,
+          "data_attempts": 5,
+          "gateway": 4,
+          "new_record_ids": [
+            19,
+            20,
+            36
+          ],
+          "nonce": 9,
+          "receipt_s": 10689.398478,
+          "request_s": 10689.0
+        },
+        {
+          "advertised_until_s": 10749.0,
+          "data_attempts": 0,
+          "gateway": 4,
+          "new_record_ids": [],
+          "nonce": 10,
+          "receipt_s": 10734.398046,
+          "request_s": 10719.0
+        },
+        {
+          "advertised_until_s": 13178.0,
+          "data_attempts": 5,
+          "gateway": 5,
+          "new_record_ids": [
+            22,
+            23,
+            40
+          ],
+          "nonce": 11,
+          "receipt_s": 13148.39808,
+          "request_s": 13148.0
+        },
+        {
+          "advertised_until_s": 13208.0,
+          "data_attempts": 0,
+          "gateway": 5,
+          "new_record_ids": [],
+          "nonce": 12,
+          "receipt_s": 13193.39764,
+          "request_s": 13178.0
+        },
+        {
+          "advertised_until_s": 15637.0,
+          "data_attempts": 5,
+          "gateway": 6,
+          "new_record_ids": [
+            24,
+            25,
+            42
+          ],
+          "nonce": 13,
+          "receipt_s": 15607.397683,
+          "request_s": 15607.0
+        },
+        {
+          "advertised_until_s": 15667.0,
+          "data_attempts": 0,
+          "gateway": 6,
+          "new_record_ids": [],
+          "nonce": 14,
+          "receipt_s": 15652.397234,
+          "request_s": 15637.0
+        },
+        {
+          "advertised_until_s": 18095.0,
+          "data_attempts": 12,
+          "gateway": 7,
+          "new_record_ids": [
+            1325,
+            1326,
+            1331,
+            26,
+            27,
+            1334,
+            46,
+            47,
+            68,
+            69
+          ],
+          "nonce": 15,
+          "receipt_s": 18065.398314,
+          "request_s": 18065.0
+        },
+        {
+          "advertised_until_s": 18125.0,
+          "data_attempts": 1,
+          "gateway": 7,
+          "new_record_ids": [
+            91
+          ],
+          "nonce": 16,
+          "receipt_s": 18096.353099,
+          "request_s": 18095.0
+        },
+        {
+          "advertised_until_s": 20758.0,
+          "data_attempts": 10,
+          "gateway": 6,
+          "new_record_ids": [
+            43,
+            65,
+            66,
+            87,
+            88,
+            112,
+            113,
+            136,
+            137
+          ],
+          "nonce": 17,
+          "receipt_s": 20728.3983,
+          "request_s": 20728.0
+        },
+        {
+          "advertised_until_s": 20788.0,
+          "data_attempts": 5,
+          "gateway": 6,
+          "new_record_ids": [
+            156,
+            157,
+            178,
+            179
+          ],
+          "nonce": 18,
+          "receipt_s": 20758.389874,
+          "request_s": 20758.0
+        }
+      ]
+    },
+    {
+      "input_sha256": {
+        "audit": "abb0a7c0ea0f73ebcc16cc574a2c2fb4f8fd764a69debaa3a77889af18f0dfa0",
+        "job": "3984781bfaeb0c26f27c3c2a53db781430bf981924aeae09bb4a3b0e299ecd11",
+        "mission": "2127e21ab7468d971a123d596757f5510a6a9dd5ba5d23d67b287c7ccf409cf6",
+        "packets": "de26fd1d6d2d8bd8f92c9ebed8598a6b7d7e93c0bf94c4e8776301c96b8d8286",
+        "run_result": "411a6bfacc6deb95a4bf0163435d6b0f65ced475f1afef94c203f9ffbcee3523",
+        "storage": "505eafe1b931730a66535061052655bf68194d31478c186def67aa128a0d9e50",
+        "workload": "87acd7c61a6521362b948047c83eb14d1b6e302e4dcd3a4ba49d937e26202bfb"
+      },
+      "metrics": {
+        "accepted_acoustic_wake_sessions": 16,
+        "completed_gateway_visits": 9,
+        "distinct_visited_gateways": 8,
+        "gateway_capacity_evictions": 0,
+        "low_windows_acquired_before_mission_end": 805,
+        "low_windows_generated": 2440,
+        "low_windows_mature": 1648,
+        "mission_end_including_recovery_s": 30450.4976289947,
+        "optical_ack_timeout_events": 24,
+        "optical_complete_low_windows_received": 12,
+        "optical_credit_or_cache_rejections": 0,
+        "optical_data_attempted_wire_bytes": 996243,
+        "optical_data_attempts": 47,
+        "optical_data_loss_events": 0,
+        "optical_data_serialization_sum_s": 3.1879776,
+        "optical_duplicate_data_receipts": 15,
+        "optical_first_received_all_payload_bytes": 632000,
+        "optical_first_received_low_chunks": 32,
+        "optical_first_received_low_payload_bytes": 632000,
+        "optical_first_received_records": 32,
+        "optical_received_not_sender_confirmed_at_end": 9,
+        "optical_received_sender_copies_abandoned": 7,
+        "optical_sender_confirmed_records": 23,
+        "optical_unreceived_pending_records": 6,
+        "optical_unreceived_records_abandoned": 0,
+        "optically_received_not_at_surface_by_end_records": 0,
+        "sessions_with_new_optical_data": 9,
+        "sessions_without_new_optical_data": 7,
+        "surface_all_received_records": 1796,
+        "surface_complete_low_windows_all": 12,
+        "surface_complete_low_windows_mature_timely": 12,
+        "surface_received_low_chunk_payload_bytes": 632000,
+        "surface_received_low_chunks": 32,
+        "surface_vehicle_received_records": 32,
+        "surface_vehicle_received_without_confirmation_aggregate": 0,
+        "surface_vehicle_sender_confirmed_records_aggregate": 32,
+        "wake_requests_sent": 18
+      },
+      "path": "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization/confirmation-v6/011-nominal-H-S-r0-a120-q030-s312",
+      "seed": 312,
+      "sessions": [
+        {
+          "advertised_until_s": 885.0,
+          "data_attempts": 5,
+          "gateway": 0,
+          "new_record_ids": [
+            7,
+            8,
+            26
+          ],
+          "nonce": 1,
+          "receipt_s": 855.397942,
+          "request_s": 855.0
+        },
+        {
+          "advertised_until_s": 915.0,
+          "data_attempts": 0,
+          "gateway": 0,
+          "new_record_ids": [],
+          "nonce": 2,
+          "receipt_s": 900.397446,
+          "request_s": 885.0
+        },
+        {
+          "advertised_until_s": 3373.0,
+          "data_attempts": 3,
+          "gateway": 1,
+          "new_record_ids": [
+            10,
+            11,
+            28
+          ],
+          "nonce": 4,
+          "receipt_s": 3343.389545,
+          "request_s": 3343.0
+        },
+        {
+          "advertised_until_s": 5802.0,
+          "data_attempts": 5,
+          "gateway": 2,
+          "new_record_ids": [
+            12,
+            13,
+            31
+          ],
+          "nonce": 5,
+          "receipt_s": 5772.398244,
+          "request_s": 5772.0
+        },
+        {
+          "advertised_until_s": 5832.0,
+          "data_attempts": 0,
+          "gateway": 2,
+          "new_record_ids": [],
+          "nonce": 6,
+          "receipt_s": 5817.397808,
+          "request_s": 5802.0
+        },
+        {
+          "advertised_until_s": 8261.0,
+          "data_attempts": 5,
+          "gateway": 3,
+          "new_record_ids": [
+            14,
+            15,
+            36
+          ],
+          "nonce": 7,
+          "receipt_s": 8231.397847,
+          "request_s": 8231.0
+        },
+        {
+          "advertised_until_s": 8291.0,
+          "data_attempts": 0,
+          "gateway": 3,
+          "new_record_ids": [],
+          "nonce": 8,
+          "receipt_s": 8276.397401,
+          "request_s": 8261.0
+        },
+        {
+          "advertised_until_s": 10719.0,
+          "data_attempts": 5,
+          "gateway": 4,
+          "new_record_ids": [
+            16,
+            17,
+            39
+          ],
+          "nonce": 9,
+          "receipt_s": 10689.398478,
+          "request_s": 10689.0
+        },
+        {
+          "advertised_until_s": 10749.0,
+          "data_attempts": 0,
+          "gateway": 4,
+          "new_record_ids": [],
+          "nonce": 10,
+          "receipt_s": 10734.398046,
+          "request_s": 10719.0
+        },
+        {
+          "advertised_until_s": 13178.0,
+          "data_attempts": 5,
+          "gateway": 5,
+          "new_record_ids": [
+            18,
+            19,
+            42
+          ],
+          "nonce": 11,
+          "receipt_s": 13148.39808,
+          "request_s": 13148.0
+        },
+        {
+          "advertised_until_s": 13208.0,
+          "data_attempts": 0,
+          "gateway": 5,
+          "new_record_ids": [],
+          "nonce": 12,
+          "receipt_s": 13193.39764,
+          "request_s": 13178.0
+        },
+        {
+          "advertised_until_s": 15637.0,
+          "data_attempts": 5,
+          "gateway": 6,
+          "new_record_ids": [
+            20,
+            21,
+            44
+          ],
+          "nonce": 13,
+          "receipt_s": 15607.397683,
+          "request_s": 15607.0
+        },
+        {
+          "advertised_until_s": 15667.0,
+          "data_attempts": 0,
+          "gateway": 6,
+          "new_record_ids": [],
+          "nonce": 14,
+          "receipt_s": 15652.397234,
+          "request_s": 15637.0
+        },
+        {
+          "advertised_until_s": 18095.0,
+          "data_attempts": 5,
+          "gateway": 7,
+          "new_record_ids": [
+            24,
+            25,
+            46
+          ],
+          "nonce": 15,
+          "receipt_s": 18065.398314,
+          "request_s": 18065.0
+        },
+        {
+          "advertised_until_s": 18125.0,
+          "data_attempts": 0,
+          "gateway": 7,
+          "new_record_ids": [],
+          "nonce": 16,
+          "receipt_s": 18110.397878,
+          "request_s": 18095.0
+        },
+        {
+          "advertised_until_s": 20758.0,
+          "data_attempts": 9,
+          "gateway": 6,
+          "new_record_ids": [
+            45,
+            66,
+            67,
+            93,
+            94,
+            114,
+            115,
+            140
+          ],
+          "nonce": 17,
+          "receipt_s": 20728.3983,
+          "request_s": 20728.0
+        }
+      ]
+    },
+    {
+      "input_sha256": {
+        "audit": "1ada21ef8b0b1035e7a2027854ce499f3988b01046d44871439b94ac0673a9d7",
+        "job": "075fbe30081731312478c647e260700e9bfa426bcbc17d2ec2ea1f64fe997249",
+        "mission": "6065c2bcfcfd8e363764c06764808a52187ba5a83b6cb44711e82d0a200b15a5",
+        "packets": "2bfc8f9aa739528b9b4628530824e34796e28d76a2ee8e2da38c331b5982afe9",
+        "run_result": "7d59b1e687bf1b34f8f3f70bdcbe679fea6650d03a5cbdce4937374eac1200fe",
+        "storage": "36781ff0701b59be8e2a2b5561076ed1a23a3f966ad39dda35ed61ebf4ea9cb5",
+        "workload": "16791a0181416d6f878301a6252095e5b234677da896e0e2fbaeb29fedde6330"
+      },
+      "metrics": {
+        "accepted_acoustic_wake_sessions": 18,
+        "completed_gateway_visits": 9,
+        "distinct_visited_gateways": 8,
+        "gateway_capacity_evictions": 0,
+        "low_windows_acquired_before_mission_end": 805,
+        "low_windows_generated": 2440,
+        "low_windows_mature": 1648,
+        "mission_end_including_recovery_s": 30450.4976289947,
+        "optical_ack_timeout_events": 26,
+        "optical_complete_low_windows_received": 15,
+        "optical_credit_or_cache_rejections": 0,
+        "optical_data_attempted_wire_bytes": 1088051,
+        "optical_data_attempts": 55,
+        "optical_data_loss_events": 0,
+        "optical_data_serialization_sum_s": 3.4817632,
+        "optical_duplicate_data_receipts": 18,
+        "optical_first_received_all_payload_bytes": 690256,
+        "optical_first_received_low_chunks": 36,
+        "optical_first_received_low_payload_bytes": 690000,
+        "optical_first_received_records": 37,
+        "optical_received_not_sender_confirmed_at_end": 9,
+        "optical_received_sender_copies_abandoned": 8,
+        "optical_sender_confirmed_records": 28,
+        "optical_unreceived_pending_records": 6,
+        "optical_unreceived_records_abandoned": 0,
+        "optically_received_not_at_surface_by_end_records": 0,
+        "sessions_with_new_optical_data": 10,
+        "sessions_without_new_optical_data": 8,
+        "surface_all_received_records": 1825,
+        "surface_complete_low_windows_all": 15,
+        "surface_complete_low_windows_mature_timely": 15,
+        "surface_received_low_chunk_payload_bytes": 690000,
+        "surface_received_low_chunks": 36,
+        "surface_vehicle_received_records": 37,
+        "surface_vehicle_received_without_confirmation_aggregate": 2,
+        "surface_vehicle_sender_confirmed_records_aggregate": 35,
+        "wake_requests_sent": 18
+      },
+      "path": "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization/confirmation-v6/012-nominal-H-S-r0-a120-q030-s313",
+      "seed": 313,
+      "sessions": [
+        {
+          "advertised_until_s": 885.0,
+          "data_attempts": 7,
+          "gateway": 0,
+          "new_record_ids": [
+            44,
+            7,
+            8,
+            26,
+            27
+          ],
+          "nonce": 1,
+          "receipt_s": 855.397942,
+          "request_s": 855.0
+        },
+        {
+          "advertised_until_s": 915.0,
+          "data_attempts": 0,
+          "gateway": 0,
+          "new_record_ids": [],
+          "nonce": 2,
+          "receipt_s": 903.264972,
+          "request_s": 885.0
+        },
+        {
+          "advertised_until_s": 3343.0,
+          "data_attempts": 5,
+          "gateway": 1,
+          "new_record_ids": [
+            10,
+            11,
+            29
+          ],
+          "nonce": 3,
+          "receipt_s": 3313.398642,
+          "request_s": 3313.0
+        },
+        {
+          "advertised_until_s": 3373.0,
+          "data_attempts": 0,
+          "gateway": 1,
+          "new_record_ids": [],
+          "nonce": 4,
+          "receipt_s": 3358.398214,
+          "request_s": 3343.0
+        },
+        {
+          "advertised_until_s": 5802.0,
+          "data_attempts": 5,
+          "gateway": 2,
+          "new_record_ids": [
+            12,
+            13,
+            31
+          ],
+          "nonce": 5,
+          "receipt_s": 5772.398244,
+          "request_s": 5772.0
+        },
+        {
+          "advertised_until_s": 5832.0,
+          "data_attempts": 0,
+          "gateway": 2,
+          "new_record_ids": [],
+          "nonce": 6,
+          "receipt_s": 5817.397808,
+          "request_s": 5802.0
+        },
+        {
+          "advertised_until_s": 8261.0,
+          "data_attempts": 5,
+          "gateway": 3,
+          "new_record_ids": [
+            14,
+            15,
+            34
+          ],
+          "nonce": 7,
+          "receipt_s": 8231.397847,
+          "request_s": 8231.0
+        },
+        {
+          "advertised_until_s": 8291.0,
+          "data_attempts": 0,
+          "gateway": 3,
+          "new_record_ids": [],
+          "nonce": 8,
+          "receipt_s": 8276.397401,
+          "request_s": 8261.0
+        },
+        {
+          "advertised_until_s": 10719.0,
+          "data_attempts": 5,
+          "gateway": 4,
+          "new_record_ids": [
+            17,
+            18,
+            36
+          ],
+          "nonce": 9,
+          "receipt_s": 10689.398478,
+          "request_s": 10689.0
+        },
+        {
+          "advertised_until_s": 10749.0,
+          "data_attempts": 0,
+          "gateway": 4,
+          "new_record_ids": [],
+          "nonce": 10,
+          "receipt_s": 10734.398046,
+          "request_s": 10719.0
+        },
+        {
+          "advertised_until_s": 13178.0,
+          "data_attempts": 5,
+          "gateway": 5,
+          "new_record_ids": [
+            20,
+            21,
+            40
+          ],
+          "nonce": 11,
+          "receipt_s": 13148.39808,
+          "request_s": 13148.0
+        },
+        {
+          "advertised_until_s": 13208.0,
+          "data_attempts": 0,
+          "gateway": 5,
+          "new_record_ids": [],
+          "nonce": 12,
+          "receipt_s": 13193.39764,
+          "request_s": 13178.0
+        },
+        {
+          "advertised_until_s": 15637.0,
+          "data_attempts": 5,
+          "gateway": 6,
+          "new_record_ids": [
+            22,
+            23,
+            42
+          ],
+          "nonce": 13,
+          "receipt_s": 15607.397683,
+          "request_s": 15607.0
+        },
+        {
+          "advertised_until_s": 15667.0,
+          "data_attempts": 0,
+          "gateway": 6,
+          "new_record_ids": [],
+          "nonce": 14,
+          "receipt_s": 15652.397234,
+          "request_s": 15637.0
+        },
+        {
+          "advertised_until_s": 18095.0,
+          "data_attempts": 5,
+          "gateway": 7,
+          "new_record_ids": [
+            24,
+            25,
+            45
+          ],
+          "nonce": 15,
+          "receipt_s": 18065.398314,
+          "request_s": 18065.0
+        },
+        {
+          "advertised_until_s": 18125.0,
+          "data_attempts": 0,
+          "gateway": 7,
+          "new_record_ids": [],
+          "nonce": 16,
+          "receipt_s": 18110.397878,
+          "request_s": 18095.0
+        },
+        {
+          "advertised_until_s": 20758.0,
+          "data_attempts": 8,
+          "gateway": 6,
+          "new_record_ids": [
+            43,
+            61,
+            62,
+            80,
+            81,
+            100,
+            101
+          ],
+          "nonce": 17,
+          "receipt_s": 20728.3983,
+          "request_s": 20728.0
+        },
+        {
+          "advertised_until_s": 20788.0,
+          "data_attempts": 5,
+          "gateway": 6,
+          "new_record_ids": [
+            117,
+            118,
+            148,
+            149
+          ],
+          "nonce": 18,
+          "receipt_s": 20758.389874,
+          "request_s": 20758.0
+        }
+      ]
+    },
+    {
+      "input_sha256": {
+        "audit": "d6ad6958e664d94a38ce5d741f13aae810d137a0e78cc7cb5b1a5ac5285b67b3",
+        "job": "6f72f5bf17ec93c07ab3d04a7d86f8abe60b16b872e4c3428c68467ca7bd3967",
+        "mission": "279b5a22966d1c4569286ae4556ea986ecd329ea6d1fc47739e23b7eed4fd17b",
+        "packets": "4bd22457e8dd36d8254a0260b89248d88c072cff3328c3609844d941bf8f0fcf",
+        "run_result": "f906363be69af7016ac8309d5e3da5b02b0e2cb882fe5b870f4b1cd15645c066",
+        "storage": "0c60318b1173e9c1e113fbdb2fe3354e18646bee396f72f6fba5a6dd87e5be9e",
+        "workload": "f5b1a41041ff3d69bf5808fd9a7a33627e047f11e33ec8a355a9e08a1af0707b"
+      },
+      "metrics": {
+        "accepted_acoustic_wake_sessions": 18,
+        "completed_gateway_visits": 9,
+        "distinct_visited_gateways": 8,
+        "gateway_capacity_evictions": 0,
+        "low_windows_acquired_before_mission_end": 805,
+        "low_windows_generated": 2440,
+        "low_windows_mature": 1648,
+        "mission_end_including_recovery_s": 30450.4976289947,
+        "optical_ack_timeout_events": 26,
+        "optical_complete_low_windows_received": 14,
+        "optical_credit_or_cache_rejections": 0,
+        "optical_data_attempted_wire_bytes": 1143726,
+        "optical_data_attempts": 54,
+        "optical_data_loss_events": 0,
+        "optical_data_serialization_sum_s": 3.6599232,
+        "optical_duplicate_data_receipts": 18,
+        "optical_first_received_all_payload_bytes": 704000,
+        "optical_first_received_low_chunks": 36,
+        "optical_first_received_low_payload_bytes": 704000,
+        "optical_first_received_records": 36,
+        "optical_received_not_sender_confirmed_at_end": 9,
+        "optical_received_sender_copies_abandoned": 8,
+        "optical_sender_confirmed_records": 27,
+        "optical_unreceived_pending_records": 7,
+        "optical_unreceived_records_abandoned": 0,
+        "optically_received_not_at_surface_by_end_records": 0,
+        "sessions_with_new_optical_data": 10,
+        "sessions_without_new_optical_data": 8,
+        "surface_all_received_records": 1754,
+        "surface_complete_low_windows_all": 14,
+        "surface_complete_low_windows_mature_timely": 14,
+        "surface_received_low_chunk_payload_bytes": 704000,
+        "surface_received_low_chunks": 36,
+        "surface_vehicle_received_records": 36,
+        "surface_vehicle_received_without_confirmation_aggregate": 1,
+        "surface_vehicle_sender_confirmed_records_aggregate": 35,
+        "wake_requests_sent": 18
+      },
+      "path": "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization/confirmation-v6/013-nominal-H-S-r0-a120-q030-s314",
+      "seed": 314,
+      "sessions": [
+        {
+          "advertised_until_s": 885.0,
+          "data_attempts": 5,
+          "gateway": 0,
+          "new_record_ids": [
+            9,
+            10,
+            30
+          ],
+          "nonce": 1,
+          "receipt_s": 855.397942,
+          "request_s": 855.0
+        },
+        {
+          "advertised_until_s": 915.0,
+          "data_attempts": 0,
+          "gateway": 0,
+          "new_record_ids": [],
+          "nonce": 2,
+          "receipt_s": 900.397446,
+          "request_s": 885.0
+        },
+        {
+          "advertised_until_s": 3343.0,
+          "data_attempts": 5,
+          "gateway": 1,
+          "new_record_ids": [
+            12,
+            13,
+            33
+          ],
+          "nonce": 3,
+          "receipt_s": 3313.398642,
+          "request_s": 3313.0
+        },
+        {
+          "advertised_until_s": 3373.0,
+          "data_attempts": 0,
+          "gateway": 1,
+          "new_record_ids": [],
+          "nonce": 4,
+          "receipt_s": 3358.398214,
+          "request_s": 3343.0
+        },
+        {
+          "advertised_until_s": 5802.0,
+          "data_attempts": 5,
+          "gateway": 2,
+          "new_record_ids": [
+            15,
+            16,
+            36
+          ],
+          "nonce": 5,
+          "receipt_s": 5772.398244,
+          "request_s": 5772.0
+        },
+        {
+          "advertised_until_s": 5832.0,
+          "data_attempts": 0,
+          "gateway": 2,
+          "new_record_ids": [],
+          "nonce": 6,
+          "receipt_s": 5817.397808,
+          "request_s": 5802.0
+        },
+        {
+          "advertised_until_s": 8261.0,
+          "data_attempts": 5,
+          "gateway": 3,
+          "new_record_ids": [
+            17,
+            18,
+            38
+          ],
+          "nonce": 7,
+          "receipt_s": 8231.397847,
+          "request_s": 8231.0
+        },
+        {
+          "advertised_until_s": 8291.0,
+          "data_attempts": 0,
+          "gateway": 3,
+          "new_record_ids": [],
+          "nonce": 8,
+          "receipt_s": 8276.397401,
+          "request_s": 8261.0
+        },
+        {
+          "advertised_until_s": 10719.0,
+          "data_attempts": 5,
+          "gateway": 4,
+          "new_record_ids": [
+            20,
+            21,
+            40
+          ],
+          "nonce": 9,
+          "receipt_s": 10689.398478,
+          "request_s": 10689.0
+        },
+        {
+          "advertised_until_s": 10749.0,
+          "data_attempts": 0,
+          "gateway": 4,
+          "new_record_ids": [],
+          "nonce": 10,
+          "receipt_s": 10734.398046,
+          "request_s": 10719.0
+        },
+        {
+          "advertised_until_s": 13178.0,
+          "data_attempts": 5,
+          "gateway": 5,
+          "new_record_ids": [
+            23,
+            24,
+            44
+          ],
+          "nonce": 11,
+          "receipt_s": 13148.39808,
+          "request_s": 13148.0
+        },
+        {
+          "advertised_until_s": 13208.0,
+          "data_attempts": 0,
+          "gateway": 5,
+          "new_record_ids": [],
+          "nonce": 12,
+          "receipt_s": 13193.39764,
+          "request_s": 13178.0
+        },
+        {
+          "advertised_until_s": 15637.0,
+          "data_attempts": 5,
+          "gateway": 6,
+          "new_record_ids": [
+            26,
+            27,
+            48
+          ],
+          "nonce": 13,
+          "receipt_s": 15607.397683,
+          "request_s": 15607.0
+        },
+        {
+          "advertised_until_s": 15667.0,
+          "data_attempts": 0,
+          "gateway": 6,
+          "new_record_ids": [],
+          "nonce": 14,
+          "receipt_s": 15652.397234,
+          "request_s": 15637.0
+        },
+        {
+          "advertised_until_s": 18095.0,
+          "data_attempts": 5,
+          "gateway": 7,
+          "new_record_ids": [
+            28,
+            29,
+            50
+          ],
+          "nonce": 15,
+          "receipt_s": 18065.398314,
+          "request_s": 18065.0
+        },
+        {
+          "advertised_until_s": 18125.0,
+          "data_attempts": 0,
+          "gateway": 7,
+          "new_record_ids": [],
+          "nonce": 16,
+          "receipt_s": 18110.397878,
+          "request_s": 18095.0
+        },
+        {
+          "advertised_until_s": 20758.0,
+          "data_attempts": 9,
+          "gateway": 6,
+          "new_record_ids": [
+            49,
+            70,
+            71,
+            94,
+            95,
+            117,
+            118,
+            139
+          ],
+          "nonce": 17,
+          "receipt_s": 20728.3983,
+          "request_s": 20728.0
+        },
+        {
+          "advertised_until_s": 20788.0,
+          "data_attempts": 5,
+          "gateway": 6,
+          "new_record_ids": [
+            140,
+            164,
+            165,
+            189
+          ],
+          "nonce": 18,
+          "receipt_s": 20758.389874,
+          "request_s": 20758.0
+        }
+      ]
+    },
+    {
+      "input_sha256": {
+        "audit": "15b612c169421c87af0f25a307e3664f794ca1e821c6b6aeb46716bcd393cd52",
+        "job": "691bb03734324e76dc47a518751ed4fe7d15ac6db2920a23b3cf2fc72ca8858b",
+        "mission": "d96eae5c5b3ae3cf00a0f51db2e596909ff1170f3ab10354e4aa661b1fa7040a",
+        "packets": "01e94446e039d5dcd0af77ececce2a0ffb1f92763218cc353bd2414dbf6d5d50",
+        "run_result": "3df6c921e9ec63c7c700624396bf3de66544eb6dfde02da7deb5c3a6c2a901a5",
+        "storage": "237ffb1a0b42e0e5862603cf4dece198c1fd4ad396c43758e2bb0869869e4c55",
+        "workload": "724c2c0706025cb4d7c137ea509c82445ab1c8655d0cf342d0309766f586f6bd"
+      },
+      "metrics": {
+        "accepted_acoustic_wake_sessions": 18,
+        "completed_gateway_visits": 9,
+        "distinct_visited_gateways": 8,
+        "gateway_capacity_evictions": 0,
+        "low_windows_acquired_before_mission_end": 805,
+        "low_windows_generated": 2440,
+        "low_windows_mature": 1648,
+        "mission_end_including_recovery_s": 30450.4976289947,
+        "optical_ack_timeout_events": 26,
+        "optical_complete_low_windows_received": 15,
+        "optical_credit_or_cache_rejections": 0,
+        "optical_data_attempted_wire_bytes": 1140795,
+        "optical_data_attempts": 55,
+        "optical_data_loss_events": 0,
+        "optical_data_serialization_sum_s": 3.650544,
+        "optical_duplicate_data_receipts": 18,
+        "optical_first_received_all_payload_bytes": 715000,
+        "optical_first_received_low_chunks": 37,
+        "optical_first_received_low_payload_bytes": 715000,
+        "optical_first_received_records": 37,
+        "optical_received_not_sender_confirmed_at_end": 9,
+        "optical_received_sender_copies_abandoned": 8,
+        "optical_sender_confirmed_records": 28,
+        "optical_unreceived_pending_records": 7,
+        "optical_unreceived_records_abandoned": 0,
+        "optically_received_not_at_surface_by_end_records": 0,
+        "sessions_with_new_optical_data": 10,
+        "sessions_without_new_optical_data": 8,
+        "surface_all_received_records": 1801,
+        "surface_complete_low_windows_all": 15,
+        "surface_complete_low_windows_mature_timely": 15,
+        "surface_received_low_chunk_payload_bytes": 715000,
+        "surface_received_low_chunks": 37,
+        "surface_vehicle_received_records": 37,
+        "surface_vehicle_received_without_confirmation_aggregate": 1,
+        "surface_vehicle_sender_confirmed_records_aggregate": 36,
+        "wake_requests_sent": 18
+      },
+      "path": "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization/confirmation-v6/014-nominal-H-S-r0-a120-q030-s315",
+      "seed": 315,
+      "sessions": [
+        {
+          "advertised_until_s": 885.0,
+          "data_attempts": 5,
+          "gateway": 0,
+          "new_record_ids": [
+            6,
+            7,
+            26
+          ],
+          "nonce": 1,
+          "receipt_s": 855.397942,
+          "request_s": 855.0
+        },
+        {
+          "advertised_until_s": 915.0,
+          "data_attempts": 0,
+          "gateway": 0,
+          "new_record_ids": [],
+          "nonce": 2,
+          "receipt_s": 900.397446,
+          "request_s": 885.0
+        },
+        {
+          "advertised_until_s": 3343.0,
+          "data_attempts": 5,
+          "gateway": 1,
+          "new_record_ids": [
+            8,
+            9,
+            29
+          ],
+          "nonce": 3,
+          "receipt_s": 3313.398642,
+          "request_s": 3313.0
+        },
+        {
+          "advertised_until_s": 3373.0,
+          "data_attempts": 0,
+          "gateway": 1,
+          "new_record_ids": [],
+          "nonce": 4,
+          "receipt_s": 3358.398214,
+          "request_s": 3343.0
+        },
+        {
+          "advertised_until_s": 5802.0,
+          "data_attempts": 5,
+          "gateway": 2,
+          "new_record_ids": [
+            10,
+            11,
+            31
+          ],
+          "nonce": 5,
+          "receipt_s": 5772.398244,
+          "request_s": 5772.0
+        },
+        {
+          "advertised_until_s": 5832.0,
+          "data_attempts": 0,
+          "gateway": 2,
+          "new_record_ids": [],
+          "nonce": 6,
+          "receipt_s": 5817.397808,
+          "request_s": 5802.0
+        },
+        {
+          "advertised_until_s": 8261.0,
+          "data_attempts": 5,
+          "gateway": 3,
+          "new_record_ids": [
+            13,
+            14,
+            33
+          ],
+          "nonce": 7,
+          "receipt_s": 8231.397847,
+          "request_s": 8231.0
+        },
+        {
+          "advertised_until_s": 8291.0,
+          "data_attempts": 0,
+          "gateway": 3,
+          "new_record_ids": [],
+          "nonce": 8,
+          "receipt_s": 8276.397401,
+          "request_s": 8261.0
+        },
+        {
+          "advertised_until_s": 10719.0,
+          "data_attempts": 5,
+          "gateway": 4,
+          "new_record_ids": [
+            17,
+            18,
+            35
+          ],
+          "nonce": 9,
+          "receipt_s": 10689.398478,
+          "request_s": 10689.0
+        },
+        {
+          "advertised_until_s": 10749.0,
+          "data_attempts": 0,
+          "gateway": 4,
+          "new_record_ids": [],
+          "nonce": 10,
+          "receipt_s": 10734.398046,
+          "request_s": 10719.0
+        },
+        {
+          "advertised_until_s": 13178.0,
+          "data_attempts": 5,
+          "gateway": 5,
+          "new_record_ids": [
+            20,
+            21,
+            37
+          ],
+          "nonce": 11,
+          "receipt_s": 13148.39808,
+          "request_s": 13148.0
+        },
+        {
+          "advertised_until_s": 13208.0,
+          "data_attempts": 0,
+          "gateway": 5,
+          "new_record_ids": [],
+          "nonce": 12,
+          "receipt_s": 13193.39764,
+          "request_s": 13178.0
+        },
+        {
+          "advertised_until_s": 15637.0,
+          "data_attempts": 5,
+          "gateway": 6,
+          "new_record_ids": [
+            22,
+            23,
+            40
+          ],
+          "nonce": 13,
+          "receipt_s": 15607.397683,
+          "request_s": 15607.0
+        },
+        {
+          "advertised_until_s": 15667.0,
+          "data_attempts": 0,
+          "gateway": 6,
+          "new_record_ids": [],
+          "nonce": 14,
+          "receipt_s": 15652.397234,
+          "request_s": 15637.0
+        },
+        {
+          "advertised_until_s": 18095.0,
+          "data_attempts": 5,
+          "gateway": 7,
+          "new_record_ids": [
+            24,
+            25,
+            43
+          ],
+          "nonce": 15,
+          "receipt_s": 18065.398314,
+          "request_s": 18065.0
+        },
+        {
+          "advertised_until_s": 18125.0,
+          "data_attempts": 0,
+          "gateway": 7,
+          "new_record_ids": [],
+          "nonce": 16,
+          "receipt_s": 18110.397878,
+          "request_s": 18095.0
+        },
+        {
+          "advertised_until_s": 20758.0,
+          "data_attempts": 10,
+          "gateway": 6,
+          "new_record_ids": [
+            41,
+            62,
+            63,
+            87,
+            88,
+            109,
+            110,
+            132,
+            133
+          ],
+          "nonce": 17,
+          "receipt_s": 20728.3983,
+          "request_s": 20728.0
+        },
+        {
+          "advertised_until_s": 20788.0,
+          "data_attempts": 5,
+          "gateway": 6,
+          "new_record_ids": [
+            154,
+            155,
+            176,
+            177
+          ],
+          "nonce": 18,
+          "receipt_s": 20758.389874,
+          "request_s": 20758.0
+        }
+      ]
+    },
+    {
+      "input_sha256": {
+        "audit": "57176296f8079fdeea321204a62cc2d0da6a6bfa3a874b2ab684e6e6eafd4b62",
+        "job": "91327b803b218b9e4451fa690c9cbf45afaafea76509c3571ce6660f51179449",
+        "mission": "90b799f916c2fdefd7471de05eeae5f802ad20381ff0fc6e2cfe025e5bd5fe04",
+        "packets": "7b1cfbb6023b58b6ee912a3b41d3736e4c985a429eccbe7f447d2fe9b87d7f87",
+        "run_result": "91a696754b803736fcd541326234cce14e6cd27195a9a1c7bf257052dc2bcb67",
+        "storage": "2ce09cd0eb6f2dff8a374bbc1ae9bcd034a3ac3de98ce9679854e3f6ae26e90a",
+        "workload": "1fb58b1795445ba1423387c555cd4515a252d072d916b3fba1515e90972a1b43"
+      },
+      "metrics": {
+        "accepted_acoustic_wake_sessions": 18,
+        "completed_gateway_visits": 9,
+        "distinct_visited_gateways": 8,
+        "gateway_capacity_evictions": 0,
+        "low_windows_acquired_before_mission_end": 805,
+        "low_windows_generated": 2440,
+        "low_windows_mature": 1648,
+        "mission_end_including_recovery_s": 30450.4976289947,
+        "optical_ack_timeout_events": 26,
+        "optical_complete_low_windows_received": 14,
+        "optical_credit_or_cache_rejections": 0,
+        "optical_data_attempted_wire_bytes": 1104657,
+        "optical_data_attempts": 53,
+        "optical_data_loss_events": 0,
+        "optical_data_serialization_sum_s": 3.5349024,
+        "optical_duplicate_data_receipts": 18,
+        "optical_first_received_all_payload_bytes": 679000,
+        "optical_first_received_low_chunks": 35,
+        "optical_first_received_low_payload_bytes": 679000,
+        "optical_first_received_records": 35,
+        "optical_received_not_sender_confirmed_at_end": 9,
+        "optical_received_sender_copies_abandoned": 8,
+        "optical_sender_confirmed_records": 26,
+        "optical_unreceived_pending_records": 7,
+        "optical_unreceived_records_abandoned": 0,
+        "optically_received_not_at_surface_by_end_records": 0,
+        "sessions_with_new_optical_data": 10,
+        "sessions_without_new_optical_data": 8,
+        "surface_all_received_records": 1756,
+        "surface_complete_low_windows_all": 14,
+        "surface_complete_low_windows_mature_timely": 14,
+        "surface_received_low_chunk_payload_bytes": 679000,
+        "surface_received_low_chunks": 35,
+        "surface_vehicle_received_records": 35,
+        "surface_vehicle_received_without_confirmation_aggregate": 1,
+        "surface_vehicle_sender_confirmed_records_aggregate": 34,
+        "wake_requests_sent": 18
+      },
+      "path": "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization/confirmation-v6/015-nominal-H-S-r0-a120-q030-s316",
+      "seed": 316,
+      "sessions": [
+        {
+          "advertised_until_s": 885.0,
+          "data_attempts": 5,
+          "gateway": 0,
+          "new_record_ids": [
+            6,
+            7,
+            27
+          ],
+          "nonce": 1,
+          "receipt_s": 855.397942,
+          "request_s": 855.0
+        },
+        {
+          "advertised_until_s": 915.0,
+          "data_attempts": 0,
+          "gateway": 0,
+          "new_record_ids": [],
+          "nonce": 2,
+          "receipt_s": 900.397446,
+          "request_s": 885.0
+        },
+        {
+          "advertised_until_s": 3343.0,
+          "data_attempts": 5,
+          "gateway": 1,
+          "new_record_ids": [
+            8,
+            9,
+            30
+          ],
+          "nonce": 3,
+          "receipt_s": 3313.398642,
+          "request_s": 3313.0
+        },
+        {
+          "advertised_until_s": 3373.0,
+          "data_attempts": 0,
+          "gateway": 1,
+          "new_record_ids": [],
+          "nonce": 4,
+          "receipt_s": 3358.398214,
+          "request_s": 3343.0
+        },
+        {
+          "advertised_until_s": 5802.0,
+          "data_attempts": 5,
+          "gateway": 2,
+          "new_record_ids": [
+            11,
+            12,
+            32
+          ],
+          "nonce": 5,
+          "receipt_s": 5772.398244,
+          "request_s": 5772.0
+        },
+        {
+          "advertised_until_s": 5832.0,
+          "data_attempts": 0,
+          "gateway": 2,
+          "new_record_ids": [],
+          "nonce": 6,
+          "receipt_s": 5817.397808,
+          "request_s": 5802.0
+        },
+        {
+          "advertised_until_s": 8261.0,
+          "data_attempts": 5,
+          "gateway": 3,
+          "new_record_ids": [
+            13,
+            14,
+            34
+          ],
+          "nonce": 7,
+          "receipt_s": 8231.397847,
+          "request_s": 8231.0
+        },
+        {
+          "advertised_until_s": 8291.0,
+          "data_attempts": 0,
+          "gateway": 3,
+          "new_record_ids": [],
+          "nonce": 8,
+          "receipt_s": 8276.397401,
+          "request_s": 8261.0
+        },
+        {
+          "advertised_until_s": 10719.0,
+          "data_attempts": 5,
+          "gateway": 4,
+          "new_record_ids": [
+            15,
+            16,
+            37
+          ],
+          "nonce": 9,
+          "receipt_s": 10689.398478,
+          "request_s": 10689.0
+        },
+        {
+          "advertised_until_s": 10749.0,
+          "data_attempts": 0,
+          "gateway": 4,
+          "new_record_ids": [],
+          "nonce": 10,
+          "receipt_s": 10734.398046,
+          "request_s": 10719.0
+        },
+        {
+          "advertised_until_s": 13178.0,
+          "data_attempts": 5,
+          "gateway": 5,
+          "new_record_ids": [
+            18,
+            19,
+            40
+          ],
+          "nonce": 11,
+          "receipt_s": 13148.39808,
+          "request_s": 13148.0
+        },
+        {
+          "advertised_until_s": 13208.0,
+          "data_attempts": 0,
+          "gateway": 5,
+          "new_record_ids": [],
+          "nonce": 12,
+          "receipt_s": 13193.39764,
+          "request_s": 13178.0
+        },
+        {
+          "advertised_until_s": 15637.0,
+          "data_attempts": 5,
+          "gateway": 6,
+          "new_record_ids": [
+            20,
+            21,
+            44
+          ],
+          "nonce": 13,
+          "receipt_s": 15607.397683,
+          "request_s": 15607.0
+        },
+        {
+          "advertised_until_s": 15667.0,
+          "data_attempts": 0,
+          "gateway": 6,
+          "new_record_ids": [],
+          "nonce": 14,
+          "receipt_s": 15652.397234,
+          "request_s": 15637.0
+        },
+        {
+          "advertised_until_s": 18095.0,
+          "data_attempts": 5,
+          "gateway": 7,
+          "new_record_ids": [
+            24,
+            25,
+            47
+          ],
+          "nonce": 15,
+          "receipt_s": 18065.398314,
+          "request_s": 18065.0
+        },
+        {
+          "advertised_until_s": 18125.0,
+          "data_attempts": 0,
+          "gateway": 7,
+          "new_record_ids": [],
+          "nonce": 16,
+          "receipt_s": 18110.397878,
+          "request_s": 18095.0
+        },
+        {
+          "advertised_until_s": 20758.0,
+          "data_attempts": 8,
+          "gateway": 6,
+          "new_record_ids": [
+            45,
+            66,
+            67,
+            89,
+            90,
+            115,
+            116
+          ],
+          "nonce": 17,
+          "receipt_s": 20728.3983,
+          "request_s": 20728.0
+        },
+        {
+          "advertised_until_s": 20788.0,
+          "data_attempts": 5,
+          "gateway": 6,
+          "new_record_ids": [
+            135,
+            136,
+            155,
+            156
+          ],
+          "nonce": 18,
+          "receipt_s": 20758.389874,
+          "request_s": 20758.0
+        }
+      ]
+    },
+    {
+      "input_sha256": {
+        "audit": "c1eec792cc12ac6c60da284ba199ecc900e8247116bd7399647f3a45cac1e60b",
+        "job": "f185e9fcab2fbb39871e2f124da9bea5a142e8dfb29d7c4204008bebc5171696",
+        "mission": "ef8f8882a2d99527e285a421ac62866b45cebf5c9ffc8090b5c2fce89829879b",
+        "packets": "31cc954929c73774f1e26c71f77b73e1b3668858181a4810f1c2ae930ebe286f",
+        "run_result": "7d7ad69a09a0fdc8830272aa5b4b9fff774de44acd19fa1f54d1f94434b6493d",
+        "storage": "77ae4253e17c685dc72e42a27c5d16ed968fd474ee4c28a45656aef9af5764f8",
+        "workload": "dd0fbf49f98443e992705ef0f00e92d3c578be78ac5e15d230e03e9b061f5791"
+      },
+      "metrics": {
+        "accepted_acoustic_wake_sessions": 18,
+        "completed_gateway_visits": 9,
+        "distinct_visited_gateways": 8,
+        "gateway_capacity_evictions": 0,
+        "low_windows_acquired_before_mission_end": 805,
+        "low_windows_generated": 2440,
+        "low_windows_mature": 1648,
+        "mission_end_including_recovery_s": 30450.4976289947,
+        "optical_ack_timeout_events": 26,
+        "optical_complete_low_windows_received": 14,
+        "optical_credit_or_cache_rejections": 0,
+        "optical_data_attempted_wire_bytes": 1104657,
+        "optical_data_attempts": 53,
+        "optical_data_loss_events": 0,
+        "optical_data_serialization_sum_s": 3.5349024,
+        "optical_duplicate_data_receipts": 18,
+        "optical_first_received_all_payload_bytes": 679000,
+        "optical_first_received_low_chunks": 35,
+        "optical_first_received_low_payload_bytes": 679000,
+        "optical_first_received_records": 35,
+        "optical_received_not_sender_confirmed_at_end": 9,
+        "optical_received_sender_copies_abandoned": 8,
+        "optical_sender_confirmed_records": 26,
+        "optical_unreceived_pending_records": 7,
+        "optical_unreceived_records_abandoned": 0,
+        "optically_received_not_at_surface_by_end_records": 0,
+        "sessions_with_new_optical_data": 10,
+        "sessions_without_new_optical_data": 8,
+        "surface_all_received_records": 1747,
+        "surface_complete_low_windows_all": 14,
+        "surface_complete_low_windows_mature_timely": 14,
+        "surface_received_low_chunk_payload_bytes": 679000,
+        "surface_received_low_chunks": 35,
+        "surface_vehicle_received_records": 35,
+        "surface_vehicle_received_without_confirmation_aggregate": 1,
+        "surface_vehicle_sender_confirmed_records_aggregate": 34,
+        "wake_requests_sent": 18
+      },
+      "path": "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization/confirmation-v6/016-nominal-H-S-r0-a120-q030-s317",
+      "seed": 317,
+      "sessions": [
+        {
+          "advertised_until_s": 885.0,
+          "data_attempts": 5,
+          "gateway": 0,
+          "new_record_ids": [
+            5,
+            6,
+            26
+          ],
+          "nonce": 1,
+          "receipt_s": 855.397942,
+          "request_s": 855.0
+        },
+        {
+          "advertised_until_s": 915.0,
+          "data_attempts": 0,
+          "gateway": 0,
+          "new_record_ids": [],
+          "nonce": 2,
+          "receipt_s": 900.397446,
+          "request_s": 885.0
+        },
+        {
+          "advertised_until_s": 3343.0,
+          "data_attempts": 5,
+          "gateway": 1,
+          "new_record_ids": [
+            7,
+            8,
+            28
+          ],
+          "nonce": 3,
+          "receipt_s": 3313.398642,
+          "request_s": 3313.0
+        },
+        {
+          "advertised_until_s": 3373.0,
+          "data_attempts": 0,
+          "gateway": 1,
+          "new_record_ids": [],
+          "nonce": 4,
+          "receipt_s": 3358.398214,
+          "request_s": 3343.0
+        },
+        {
+          "advertised_until_s": 5802.0,
+          "data_attempts": 5,
+          "gateway": 2,
+          "new_record_ids": [
+            9,
+            10,
+            30
+          ],
+          "nonce": 5,
+          "receipt_s": 5772.398244,
+          "request_s": 5772.0
+        },
+        {
+          "advertised_until_s": 5832.0,
+          "data_attempts": 0,
+          "gateway": 2,
+          "new_record_ids": [],
+          "nonce": 6,
+          "receipt_s": 5817.397808,
+          "request_s": 5802.0
+        },
+        {
+          "advertised_until_s": 8261.0,
+          "data_attempts": 5,
+          "gateway": 3,
+          "new_record_ids": [
+            12,
+            13,
+            34
+          ],
+          "nonce": 7,
+          "receipt_s": 8231.397847,
+          "request_s": 8231.0
+        },
+        {
+          "advertised_until_s": 8291.0,
+          "data_attempts": 0,
+          "gateway": 3,
+          "new_record_ids": [],
+          "nonce": 8,
+          "receipt_s": 8276.397401,
+          "request_s": 8261.0
+        },
+        {
+          "advertised_until_s": 10719.0,
+          "data_attempts": 5,
+          "gateway": 4,
+          "new_record_ids": [
+            15,
+            16,
+            36
+          ],
+          "nonce": 9,
+          "receipt_s": 10689.398478,
+          "request_s": 10689.0
+        },
+        {
+          "advertised_until_s": 10749.0,
+          "data_attempts": 0,
+          "gateway": 4,
+          "new_record_ids": [],
+          "nonce": 10,
+          "receipt_s": 10734.398046,
+          "request_s": 10719.0
+        },
+        {
+          "advertised_until_s": 13178.0,
+          "data_attempts": 5,
+          "gateway": 5,
+          "new_record_ids": [
+            17,
+            18,
+            38
+          ],
+          "nonce": 11,
+          "receipt_s": 13148.39808,
+          "request_s": 13148.0
+        },
+        {
+          "advertised_until_s": 13208.0,
+          "data_attempts": 0,
+          "gateway": 5,
+          "new_record_ids": [],
+          "nonce": 12,
+          "receipt_s": 13193.39764,
+          "request_s": 13178.0
+        },
+        {
+          "advertised_until_s": 15637.0,
+          "data_attempts": 5,
+          "gateway": 6,
+          "new_record_ids": [
+            21,
+            22,
+            40
+          ],
+          "nonce": 13,
+          "receipt_s": 15607.397683,
+          "request_s": 15607.0
+        },
+        {
+          "advertised_until_s": 15667.0,
+          "data_attempts": 0,
+          "gateway": 6,
+          "new_record_ids": [],
+          "nonce": 14,
+          "receipt_s": 15652.397234,
+          "request_s": 15637.0
+        },
+        {
+          "advertised_until_s": 18095.0,
+          "data_attempts": 5,
+          "gateway": 7,
+          "new_record_ids": [
+            23,
+            24,
+            42
+          ],
+          "nonce": 15,
+          "receipt_s": 18065.398314,
+          "request_s": 18065.0
+        },
+        {
+          "advertised_until_s": 18125.0,
+          "data_attempts": 0,
+          "gateway": 7,
+          "new_record_ids": [],
+          "nonce": 16,
+          "receipt_s": 18110.397878,
+          "request_s": 18095.0
+        },
+        {
+          "advertised_until_s": 20758.0,
+          "data_attempts": 8,
+          "gateway": 6,
+          "new_record_ids": [
+            41,
+            63,
+            64,
+            82,
+            83,
+            105,
+            106
+          ],
+          "nonce": 17,
+          "receipt_s": 20728.3983,
+          "request_s": 20728.0
+        },
+        {
+          "advertised_until_s": 20788.0,
+          "data_attempts": 5,
+          "gateway": 6,
+          "new_record_ids": [
+            124,
+            125,
+            146,
+            147
+          ],
+          "nonce": 18,
+          "receipt_s": 20758.389874,
+          "request_s": 20758.0
+        }
+      ]
+    },
+    {
+      "input_sha256": {
+        "audit": "edf78ca64b28175bdda67db86aa5b60b6742373f5b78ec773f4c6be654b788bf",
+        "job": "c27cf6d4a41dc64270ef9006496ae1128ccacc73a1f4fe753ae3e30220720b8a",
+        "mission": "32249f769cc23207d1f5ebd22367d0e85f5fe87f4f20109717eeb11fe1086333",
+        "packets": "82e7f24afad89a6bd27e471f440171e92c242355b421817224045cbeac0cdb72",
+        "run_result": "6846e95d90721cf269f1acd19a2b24301e6120b1bc10425cfff9ed4abe884af2",
+        "storage": "534b0f3838562d08fdece8f83a87f4f6c0a82c5765f3f2c751a2f2d47030588a",
+        "workload": "59e90665635d0cca1348bf41031fb3015f2fdf7f315640a2836e68663d8d4189"
+      },
+      "metrics": {
+        "accepted_acoustic_wake_sessions": 18,
+        "completed_gateway_visits": 9,
+        "distinct_visited_gateways": 8,
+        "gateway_capacity_evictions": 0,
+        "low_windows_acquired_before_mission_end": 805,
+        "low_windows_generated": 2440,
+        "low_windows_mature": 1648,
+        "mission_end_including_recovery_s": 30450.4976289947,
+        "optical_ack_timeout_events": 26,
+        "optical_complete_low_windows_received": 13,
+        "optical_credit_or_cache_rejections": 0,
+        "optical_data_attempted_wire_bytes": 988425,
+        "optical_data_attempts": 53,
+        "optical_data_loss_events": 0,
+        "optical_data_serialization_sum_s": 3.16296,
+        "optical_duplicate_data_receipts": 18,
+        "optical_first_received_all_payload_bytes": 618768,
+        "optical_first_received_low_chunks": 32,
+        "optical_first_received_low_payload_bytes": 618000,
+        "optical_first_received_records": 35,
+        "optical_received_not_sender_confirmed_at_end": 8,
+        "optical_received_sender_copies_abandoned": 8,
+        "optical_sender_confirmed_records": 27,
+        "optical_unreceived_pending_records": 8,
+        "optical_unreceived_records_abandoned": 0,
+        "optically_received_not_at_surface_by_end_records": 2,
+        "sessions_with_new_optical_data": 9,
+        "sessions_without_new_optical_data": 9,
+        "surface_all_received_records": 1760,
+        "surface_complete_low_windows_all": 13,
+        "surface_complete_low_windows_mature_timely": 13,
+        "surface_received_low_chunk_payload_bytes": 568000,
+        "surface_received_low_chunks": 30,
+        "surface_vehicle_received_records": 33,
+        "surface_vehicle_received_without_confirmation_aggregate": 0,
+        "surface_vehicle_sender_confirmed_records_aggregate": 33,
+        "wake_requests_sent": 18
+      },
+      "path": "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization/confirmation-v6/017-nominal-H-S-r0-a120-q030-s318",
+      "seed": 318,
+      "sessions": [
+        {
+          "advertised_until_s": 885.0,
+          "data_attempts": 5,
+          "gateway": 0,
+          "new_record_ids": [
+            9,
+            10,
+            32
+          ],
+          "nonce": 1,
+          "receipt_s": 855.397942,
+          "request_s": 855.0
+        },
+        {
+          "advertised_until_s": 915.0,
+          "data_attempts": 0,
+          "gateway": 0,
+          "new_record_ids": [],
+          "nonce": 2,
+          "receipt_s": 900.397446,
+          "request_s": 885.0
+        },
+        {
+          "advertised_until_s": 3343.0,
+          "data_attempts": 5,
+          "gateway": 1,
+          "new_record_ids": [
+            12,
+            13,
+            35
+          ],
+          "nonce": 3,
+          "receipt_s": 3313.398642,
+          "request_s": 3313.0
+        },
+        {
+          "advertised_until_s": 3373.0,
+          "data_attempts": 0,
+          "gateway": 1,
+          "new_record_ids": [],
+          "nonce": 4,
+          "receipt_s": 3358.398214,
+          "request_s": 3343.0
+        },
+        {
+          "advertised_until_s": 5802.0,
+          "data_attempts": 5,
+          "gateway": 2,
+          "new_record_ids": [
+            14,
+            15,
+            37
+          ],
+          "nonce": 5,
+          "receipt_s": 5772.398244,
+          "request_s": 5772.0
+        },
+        {
+          "advertised_until_s": 5832.0,
+          "data_attempts": 0,
+          "gateway": 2,
+          "new_record_ids": [],
+          "nonce": 6,
+          "receipt_s": 5817.397808,
+          "request_s": 5802.0
+        },
+        {
+          "advertised_until_s": 8261.0,
+          "data_attempts": 5,
+          "gateway": 3,
+          "new_record_ids": [
+            17,
+            18,
+            40
+          ],
+          "nonce": 7,
+          "receipt_s": 8231.397847,
+          "request_s": 8231.0
+        },
+        {
+          "advertised_until_s": 8291.0,
+          "data_attempts": 0,
+          "gateway": 3,
+          "new_record_ids": [],
+          "nonce": 8,
+          "receipt_s": 8276.397401,
+          "request_s": 8261.0
+        },
+        {
+          "advertised_until_s": 10719.0,
+          "data_attempts": 5,
+          "gateway": 4,
+          "new_record_ids": [
+            20,
+            21,
+            43
+          ],
+          "nonce": 9,
+          "receipt_s": 10689.398478,
+          "request_s": 10689.0
+        },
+        {
+          "advertised_until_s": 10749.0,
+          "data_attempts": 0,
+          "gateway": 4,
+          "new_record_ids": [],
+          "nonce": 10,
+          "receipt_s": 10734.398046,
+          "request_s": 10719.0
+        },
+        {
+          "advertised_until_s": 13178.0,
+          "data_attempts": 5,
+          "gateway": 5,
+          "new_record_ids": [
+            23,
+            24,
+            45
+          ],
+          "nonce": 11,
+          "receipt_s": 13148.39808,
+          "request_s": 13148.0
+        },
+        {
+          "advertised_until_s": 13208.0,
+          "data_attempts": 0,
+          "gateway": 5,
+          "new_record_ids": [],
+          "nonce": 12,
+          "receipt_s": 13193.39764,
+          "request_s": 13178.0
+        },
+        {
+          "advertised_until_s": 15637.0,
+          "data_attempts": 11,
+          "gateway": 6,
+          "new_record_ids": [
+            1150,
+            1151,
+            27,
+            28,
+            47,
+            48,
+            76,
+            77,
+            98,
+            99
+          ],
+          "nonce": 13,
+          "receipt_s": 15607.397683,
+          "request_s": 15607.0
+        },
+        {
+          "advertised_until_s": 15667.0,
+          "data_attempts": 0,
+          "gateway": 6,
+          "new_record_ids": [],
+          "nonce": 14,
+          "receipt_s": 15658.063419,
+          "request_s": 15637.0
+        },
+        {
+          "advertised_until_s": 18095.0,
+          "data_attempts": 7,
+          "gateway": 7,
+          "new_record_ids": [
+            1320,
+            30,
+            31,
+            50,
+            51
+          ],
+          "nonce": 15,
+          "receipt_s": 18065.398314,
+          "request_s": 18065.0
+        },
+        {
+          "advertised_until_s": 18125.0,
+          "data_attempts": 0,
+          "gateway": 7,
+          "new_record_ids": [],
+          "nonce": 16,
+          "receipt_s": 18113.264677,
+          "request_s": 18095.0
+        },
+        {
+          "advertised_until_s": 20758.0,
+          "data_attempts": 5,
+          "gateway": 6,
+          "new_record_ids": [
+            118,
+            119
+          ],
+          "nonce": 17,
+          "receipt_s": 20728.3983,
+          "request_s": 20728.0
+        },
+        {
+          "advertised_until_s": 20788.0,
+          "data_attempts": 0,
+          "gateway": 6,
+          "new_record_ids": [],
+          "nonce": 18,
+          "receipt_s": 20773.3979,
+          "request_s": 20758.0
+        }
+      ]
+    },
+    {
+      "input_sha256": {
+        "audit": "130e7244690e4026f098bf625cfae82aa4076c4aad61a4683cfefb24bc8aa08b",
+        "job": "69d1dd728be9ec7503afc3331379fc1e940c7d785300bc2ee7c6cae0b280a829",
+        "mission": "378a41c55634cd02261522804a3679cf9ede7da6991679d44c4a4071fe95b3c8",
+        "packets": "2a0541c815d9b47694b5fc9bc2c215b25866ae4e7d0df8b7a6c49e72171aba31",
+        "run_result": "0f6e4f6713f5755df3cdaf7d3ffd5dc309dd68d7daeb7869eba53b30718fae08",
+        "storage": "73cff381d5bf14c163816e7b1556ae7a1bc21722a29866d655d347e974389acf",
+        "workload": "d8897dfa664a9280296cffecd24f53e1d071c1d46000fc7be269d7dfbef92a5d"
+      },
+      "metrics": {
+        "accepted_acoustic_wake_sessions": 18,
+        "completed_gateway_visits": 9,
+        "distinct_visited_gateways": 8,
+        "gateway_capacity_evictions": 0,
+        "low_windows_acquired_before_mission_end": 805,
+        "low_windows_generated": 2440,
+        "low_windows_mature": 1648,
+        "mission_end_including_recovery_s": 30450.4976289947,
+        "optical_ack_timeout_events": 26,
+        "optical_complete_low_windows_received": 14,
+        "optical_credit_or_cache_rejections": 0,
+        "optical_data_attempted_wire_bytes": 1104657,
+        "optical_data_attempts": 53,
+        "optical_data_loss_events": 0,
+        "optical_data_serialization_sum_s": 3.5349024,
+        "optical_duplicate_data_receipts": 18,
+        "optical_first_received_all_payload_bytes": 679000,
+        "optical_first_received_low_chunks": 35,
+        "optical_first_received_low_payload_bytes": 679000,
+        "optical_first_received_records": 35,
+        "optical_received_not_sender_confirmed_at_end": 9,
+        "optical_received_sender_copies_abandoned": 8,
+        "optical_sender_confirmed_records": 26,
+        "optical_unreceived_pending_records": 7,
+        "optical_unreceived_records_abandoned": 0,
+        "optically_received_not_at_surface_by_end_records": 0,
+        "sessions_with_new_optical_data": 10,
+        "sessions_without_new_optical_data": 8,
+        "surface_all_received_records": 1789,
+        "surface_complete_low_windows_all": 14,
+        "surface_complete_low_windows_mature_timely": 14,
+        "surface_received_low_chunk_payload_bytes": 679000,
+        "surface_received_low_chunks": 35,
+        "surface_vehicle_received_records": 35,
+        "surface_vehicle_received_without_confirmation_aggregate": 1,
+        "surface_vehicle_sender_confirmed_records_aggregate": 34,
+        "wake_requests_sent": 18
+      },
+      "path": "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization/confirmation-v6/018-nominal-H-S-r0-a120-q030-s319",
+      "seed": 319,
+      "sessions": [
+        {
+          "advertised_until_s": 885.0,
+          "data_attempts": 5,
+          "gateway": 0,
+          "new_record_ids": [
+            5,
+            6,
+            26
+          ],
+          "nonce": 1,
+          "receipt_s": 855.397942,
+          "request_s": 855.0
+        },
+        {
+          "advertised_until_s": 915.0,
+          "data_attempts": 0,
+          "gateway": 0,
+          "new_record_ids": [],
+          "nonce": 2,
+          "receipt_s": 900.397446,
+          "request_s": 885.0
+        },
+        {
+          "advertised_until_s": 3343.0,
+          "data_attempts": 5,
+          "gateway": 1,
+          "new_record_ids": [
+            7,
+            8,
+            28
+          ],
+          "nonce": 3,
+          "receipt_s": 3313.398642,
+          "request_s": 3313.0
+        },
+        {
+          "advertised_until_s": 3373.0,
+          "data_attempts": 0,
+          "gateway": 1,
+          "new_record_ids": [],
+          "nonce": 4,
+          "receipt_s": 3358.398214,
+          "request_s": 3343.0
+        },
+        {
+          "advertised_until_s": 5802.0,
+          "data_attempts": 5,
+          "gateway": 2,
+          "new_record_ids": [
+            9,
+            10,
+            31
+          ],
+          "nonce": 5,
+          "receipt_s": 5772.398244,
+          "request_s": 5772.0
+        },
+        {
+          "advertised_until_s": 5832.0,
+          "data_attempts": 0,
+          "gateway": 2,
+          "new_record_ids": [],
+          "nonce": 6,
+          "receipt_s": 5817.397808,
+          "request_s": 5802.0
+        },
+        {
+          "advertised_until_s": 8261.0,
+          "data_attempts": 5,
+          "gateway": 3,
+          "new_record_ids": [
+            12,
+            13,
+            35
+          ],
+          "nonce": 7,
+          "receipt_s": 8231.397847,
+          "request_s": 8231.0
+        },
+        {
+          "advertised_until_s": 8291.0,
+          "data_attempts": 0,
+          "gateway": 3,
+          "new_record_ids": [],
+          "nonce": 8,
+          "receipt_s": 8276.397401,
+          "request_s": 8261.0
+        },
+        {
+          "advertised_until_s": 10719.0,
+          "data_attempts": 5,
+          "gateway": 4,
+          "new_record_ids": [
+            16,
+            17,
+            37
+          ],
+          "nonce": 9,
+          "receipt_s": 10689.398478,
+          "request_s": 10689.0
+        },
+        {
+          "advertised_until_s": 10749.0,
+          "data_attempts": 0,
+          "gateway": 4,
+          "new_record_ids": [],
+          "nonce": 10,
+          "receipt_s": 10734.398046,
+          "request_s": 10719.0
+        },
+        {
+          "advertised_until_s": 13178.0,
+          "data_attempts": 5,
+          "gateway": 5,
+          "new_record_ids": [
+            20,
+            21,
+            39
+          ],
+          "nonce": 11,
+          "receipt_s": 13148.39808,
+          "request_s": 13148.0
+        },
+        {
+          "advertised_until_s": 13208.0,
+          "data_attempts": 0,
+          "gateway": 5,
+          "new_record_ids": [],
+          "nonce": 12,
+          "receipt_s": 13193.39764,
+          "request_s": 13178.0
+        },
+        {
+          "advertised_until_s": 15637.0,
+          "data_attempts": 5,
+          "gateway": 6,
+          "new_record_ids": [
+            22,
+            23,
+            44
+          ],
+          "nonce": 13,
+          "receipt_s": 15607.397683,
+          "request_s": 15607.0
+        },
+        {
+          "advertised_until_s": 15667.0,
+          "data_attempts": 0,
+          "gateway": 6,
+          "new_record_ids": [],
+          "nonce": 14,
+          "receipt_s": 15652.397234,
+          "request_s": 15637.0
+        },
+        {
+          "advertised_until_s": 18095.0,
+          "data_attempts": 5,
+          "gateway": 7,
+          "new_record_ids": [
+            24,
+            25,
+            46
+          ],
+          "nonce": 15,
+          "receipt_s": 18065.398314,
+          "request_s": 18065.0
+        },
+        {
+          "advertised_until_s": 18125.0,
+          "data_attempts": 0,
+          "gateway": 7,
+          "new_record_ids": [],
+          "nonce": 16,
+          "receipt_s": 18110.397878,
+          "request_s": 18095.0
+        },
+        {
+          "advertised_until_s": 20758.0,
+          "data_attempts": 8,
+          "gateway": 6,
+          "new_record_ids": [
+            45,
+            64,
+            65,
+            89,
+            90,
+            107,
+            108
+          ],
+          "nonce": 17,
+          "receipt_s": 20728.3983,
+          "request_s": 20728.0
+        },
+        {
+          "advertised_until_s": 20788.0,
+          "data_attempts": 5,
+          "gateway": 6,
+          "new_record_ids": [
+            127,
+            128,
+            149,
+            150
+          ],
+          "nonce": 18,
+          "receipt_s": 20758.389874,
+          "request_s": 20758.0
+        }
+      ]
+    },
+    {
+      "input_sha256": {
+        "audit": "8a85bc23e03405aff36f641aef1b6eeadec6b2fc49dc2336bd80cac41de52973",
+        "job": "af591b8445e8b9aee33e67ebf687823989374743f1af2824a68bed68c0d8bd6d",
+        "mission": "aa7605db67556ee8934fa23caefdf6902759008a55e22ef65feaf2dc74d89731",
+        "packets": "b7d2e90ed4f5beafd162bf58a0aeeddd2d88952ce6483662f8091bce324dbb33",
+        "run_result": "ee52433decbe609f545ef1ace3aa739e1a17f0d95464bb132de772493e3c9f16",
+        "storage": "9e5774817fe8f36a28044edb04589147c6844d884e2777e42ddc31daf29e54c5",
+        "workload": "672956054c154b09b005d35cdbd5a8d37e323b3855b47d0efb1da316b2d4830e"
+      },
+      "metrics": {
+        "accepted_acoustic_wake_sessions": 18,
+        "completed_gateway_visits": 9,
+        "distinct_visited_gateways": 8,
+        "gateway_capacity_evictions": 0,
+        "low_windows_acquired_before_mission_end": 805,
+        "low_windows_generated": 2440,
+        "low_windows_mature": 1648,
+        "mission_end_including_recovery_s": 30450.4976289947,
+        "optical_ack_timeout_events": 24,
+        "optical_complete_low_windows_received": 10,
+        "optical_credit_or_cache_rejections": 0,
+        "optical_data_attempted_wire_bytes": 911075,
+        "optical_data_attempts": 47,
+        "optical_data_loss_events": 0,
+        "optical_data_serialization_sum_s": 2.91544,
+        "optical_duplicate_data_receipts": 16,
+        "optical_first_received_all_payload_bytes": 535832,
+        "optical_first_received_low_chunks": 27,
+        "optical_first_received_low_payload_bytes": 535000,
+        "optical_first_received_records": 31,
+        "optical_received_not_sender_confirmed_at_end": 8,
+        "optical_received_sender_copies_abandoned": 8,
+        "optical_sender_confirmed_records": 23,
+        "optical_unreceived_pending_records": 7,
+        "optical_unreceived_records_abandoned": 0,
+        "optically_received_not_at_surface_by_end_records": 1,
+        "sessions_with_new_optical_data": 9,
+        "sessions_without_new_optical_data": 9,
+        "surface_all_received_records": 1806,
+        "surface_complete_low_windows_all": 9,
+        "surface_complete_low_windows_mature_timely": 9,
+        "surface_received_low_chunk_payload_bytes": 510000,
+        "surface_received_low_chunks": 26,
+        "surface_vehicle_received_records": 30,
+        "surface_vehicle_received_without_confirmation_aggregate": 0,
+        "surface_vehicle_sender_confirmed_records_aggregate": 30,
+        "wake_requests_sent": 18
+      },
+      "path": "/Users/el-hacen.diallo/Code/ns3-new/output/revision/sensors-20260920-closure/finalization/confirmation-v6/019-nominal-H-S-r0-a120-q030-s320",
+      "seed": 320,
+      "sessions": [
+        {
+          "advertised_until_s": 885.0,
+          "data_attempts": 5,
+          "gateway": 0,
+          "new_record_ids": [
+            47,
+            10,
+            11,
+            30,
+            31
+          ],
+          "nonce": 1,
+          "receipt_s": 855.397942,
+          "request_s": 855.0
+        },
+        {
+          "advertised_until_s": 915.0,
+          "data_attempts": 0,
+          "gateway": 0,
+          "new_record_ids": [],
+          "nonce": 2,
+          "receipt_s": 901.854224,
+          "request_s": 885.0
+        },
+        {
+          "advertised_until_s": 3343.0,
+          "data_attempts": 5,
+          "gateway": 1,
+          "new_record_ids": [
+            12,
+            13,
+            34
+          ],
+          "nonce": 3,
+          "receipt_s": 3313.398642,
+          "request_s": 3313.0
+        },
+        {
+          "advertised_until_s": 3373.0,
+          "data_attempts": 0,
+          "gateway": 1,
+          "new_record_ids": [],
+          "nonce": 4,
+          "receipt_s": 3358.398214,
+          "request_s": 3343.0
+        },
+        {
+          "advertised_until_s": 5802.0,
+          "data_attempts": 5,
+          "gateway": 2,
+          "new_record_ids": [
+            14,
+            15,
+            36
+          ],
+          "nonce": 5,
+          "receipt_s": 5772.398244,
+          "request_s": 5772.0
+        },
+        {
+          "advertised_until_s": 5832.0,
+          "data_attempts": 0,
+          "gateway": 2,
+          "new_record_ids": [],
+          "nonce": 6,
+          "receipt_s": 5817.397808,
+          "request_s": 5802.0
+        },
+        {
+          "advertised_until_s": 8261.0,
+          "data_attempts": 5,
+          "gateway": 3,
+          "new_record_ids": [
+            16,
+            17,
+            38
+          ],
+          "nonce": 7,
+          "receipt_s": 8231.397847,
+          "request_s": 8231.0
+        },
+        {
+          "advertised_until_s": 8291.0,
+          "data_attempts": 0,
+          "gateway": 3,
+          "new_record_ids": [],
+          "nonce": 8,
+          "receipt_s": 8276.397401,
+          "request_s": 8261.0
+        },
+        {
+          "advertised_until_s": 10719.0,
+          "data_attempts": 5,
+          "gateway": 4,
+          "new_record_ids": [
+            20,
+            21,
+            40
+          ],
+          "nonce": 9,
+          "receipt_s": 10689.398478,
+          "request_s": 10689.0
+        },
+        {
+          "advertised_until_s": 10749.0,
+          "data_attempts": 0,
+          "gateway": 4,
+          "new_record_ids": [],
+          "nonce": 10,
+          "receipt_s": 10734.398046,
+          "request_s": 10719.0
+        },
+        {
+          "advertised_until_s": 13178.0,
+          "data_attempts": 5,
+          "gateway": 5,
+          "new_record_ids": [
+            23,
+            24,
+            42
+          ],
+          "nonce": 11,
+          "receipt_s": 13148.39808,
+          "request_s": 13148.0
+        },
+        {
+          "advertised_until_s": 13208.0,
+          "data_attempts": 0,
+          "gateway": 5,
+          "new_record_ids": [],
+          "nonce": 12,
+          "receipt_s": 13193.39764,
+          "request_s": 13178.0
+        },
+        {
+          "advertised_until_s": 15637.0,
+          "data_attempts": 7,
+          "gateway": 6,
+          "new_record_ids": [
+            1144,
+            1147,
+            1148,
+            26,
+            27
+          ],
+          "nonce": 13,
+          "receipt_s": 15607.397683,
+          "request_s": 15607.0
+        },
+        {
+          "advertised_until_s": 15667.0,
+          "data_attempts": 0,
+          "gateway": 6,
+          "new_record_ids": [],
+          "nonce": 14,
+          "receipt_s": 15658.063419,
+          "request_s": 15637.0
+        },
+        {
+          "advertised_until_s": 18095.0,
+          "data_attempts": 5,
+          "gateway": 7,
+          "new_record_ids": [
+            28,
+            29,
+            48
+          ],
+          "nonce": 15,
+          "receipt_s": 18065.398314,
+          "request_s": 18065.0
+        },
+        {
+          "advertised_until_s": 18125.0,
+          "data_attempts": 0,
+          "gateway": 7,
+          "new_record_ids": [],
+          "nonce": 16,
+          "receipt_s": 18110.397878,
+          "request_s": 18095.0
+        },
+        {
+          "advertised_until_s": 20758.0,
+          "data_attempts": 5,
+          "gateway": 6,
+          "new_record_ids": [
+            45,
+            46,
+            68
+          ],
+          "nonce": 17,
+          "receipt_s": 20728.3983,
+          "request_s": 20728.0
+        },
+        {
+          "advertised_until_s": 20788.0,
+          "data_attempts": 0,
+          "gateway": 6,
+          "new_record_ids": [],
+          "nonce": 18,
+          "receipt_s": 20773.397853,
+          "request_s": 20758.0
+        }
+      ]
+    }
+  ],
+  "schema": "confirmation-collection-stages-v1",
+  "script_sha256": "6f844b579898e9ff3c953b38bcf925e9935fdb946ad98d74079ea77e86f1bf9c",
+  "summary_sha256": "9e27a2fc5ca01bde7c0840c5a3030d4c1324ae4138e0138439f6dbe64529566f",
+  "unavailable": {
+    "geometric_contact_count_and_usable_duration": "No complete geometric-contact start/end event stream. Wake sessions and attempted DATA airtime are reported separately.",
+    "individual_optical_failure_cause": "optical_loss combines listen/power/continuous-contact/frame failures; zero recorded DATA losses does not establish every potential contact succeeded.",
+    "per_record_final_acoustic_ack_identity": "ACK events omit leg/token; only explicit final-leg aggregate is used.",
+    "unattempted_service_gate_failure_breakdown": "Range, remaining-window, inactive credit and other pre-transmission exits are not individually traced."
+  }
+}

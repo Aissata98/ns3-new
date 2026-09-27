@@ -1,0 +1,893 @@
+{
+  "all_candidates": [
+    {
+      "all_runs_physically_feasible": true,
+      "candidate": {
+        "candidate_id": "D-P-r0",
+        "family": "D-P",
+        "medium_age_s": null,
+        "medium_refill_milli_records_per_s": null,
+        "medium_refill_records_per_s": null,
+        "retries": 0,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 8.999726316500972,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 9839869.492756283,
+        "high_miss_fraction": 0.09999726316500972,
+        "immersed_energy_j": 9398874.732396036,
+        "low_window_miss_fraction": 0.0,
+        "medium_miss_fraction": 0.16057621749731849
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": true,
+      "candidate": {
+        "candidate_id": "D-P-r1",
+        "family": "D-P",
+        "medium_age_s": null,
+        "medium_refill_milli_records_per_s": null,
+        "medium_refill_records_per_s": null,
+        "retries": 1,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 2.3823064300938483,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 9862205.673328988,
+        "high_miss_fraction": 0.03382306430093848,
+        "immersed_energy_j": 9420726.49366295,
+        "low_window_miss_fraction": 0.0,
+        "medium_miss_fraction": 0.06949544826702647
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": true,
+      "candidate": {
+        "candidate_id": "D-P-r3",
+        "family": "D-P",
+        "medium_age_s": null,
+        "medium_refill_milli_records_per_s": null,
+        "medium_refill_records_per_s": null,
+        "retries": 3,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": true,
+      "max_normalized_service_violation": 0.0,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 9876092.282975977,
+        "high_miss_fraction": 0.0018105895239230937,
+        "immersed_energy_j": 9434302.148377158,
+        "low_window_miss_fraction": 0.0,
+        "medium_miss_fraction": 0.0084766823920639
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": true,
+      "candidate": {
+        "candidate_id": "H-S-r0-a060-q015",
+        "family": "H-S",
+        "medium_age_s": 60,
+        "medium_refill_milli_records_per_s": 15,
+        "medium_refill_records_per_s": 0.015,
+        "retries": 0,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.82038834951456,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 29082341.38245543,
+        "high_miss_fraction": 0.009478616726602428,
+        "immersed_energy_j": 1510641.9566511048,
+        "low_window_miss_fraction": 0.9910194174757281,
+        "medium_miss_fraction": 0.27106230052078245
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": true,
+      "candidate": {
+        "candidate_id": "H-S-r0-a060-q020",
+        "family": "H-S",
+        "medium_age_s": 60,
+        "medium_refill_milli_records_per_s": 20,
+        "medium_refill_records_per_s": 0.02,
+        "retries": 0,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.81796116504854,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 29093119.949103642,
+        "high_miss_fraction": 0.010411415725264878,
+        "immersed_energy_j": 1520057.8090345524,
+        "low_window_miss_fraction": 0.9908980582524272,
+        "medium_miss_fraction": 0.04802806046297725
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": true,
+      "candidate": {
+        "candidate_id": "H-S-r0-a060-q030",
+        "family": "H-S",
+        "medium_age_s": 60,
+        "medium_refill_milli_records_per_s": 30,
+        "medium_refill_records_per_s": 0.03,
+        "retries": 0,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.825242718446603,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 29090979.365080994,
+        "high_miss_fraction": 0.009891660192615039,
+        "immersed_energy_j": 1518541.521718131,
+        "low_window_miss_fraction": 0.9912621359223301,
+        "medium_miss_fraction": 0.04631425383634931
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": true,
+      "candidate": {
+        "candidate_id": "H-S-r0-a120-q015",
+        "family": "H-S",
+        "medium_age_s": 120,
+        "medium_refill_milli_records_per_s": 15,
+        "medium_refill_records_per_s": 0.015,
+        "retries": 0,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.815533980582522,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 29081754.424160898,
+        "high_miss_fraction": 0.009995544521344312,
+        "immersed_energy_j": 1509931.57140801,
+        "low_window_miss_fraction": 0.9907766990291261,
+        "medium_miss_fraction": 0.3159658714261332
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": true,
+      "candidate": {
+        "candidate_id": "H-S-r0-a120-q020",
+        "family": "H-S",
+        "medium_age_s": 120,
+        "medium_refill_milli_records_per_s": 20,
+        "medium_refill_records_per_s": 0.02,
+        "retries": 0,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.805825242718445,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 29096308.48839323,
+        "high_miss_fraction": 0.008611394229830599,
+        "immersed_energy_j": 1522455.9109067214,
+        "low_window_miss_fraction": 0.9902912621359222,
+        "medium_miss_fraction": 0.049060908350760365
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": true,
+      "candidate": {
+        "candidate_id": "H-S-r0-a120-q030",
+        "family": "H-S",
+        "medium_age_s": 120,
+        "medium_refill_milli_records_per_s": 30,
+        "medium_refill_records_per_s": 0.03,
+        "retries": 0,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.803398058252426,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 29095520.182977628,
+        "high_miss_fraction": 0.009467940989121702,
+        "immersed_energy_j": 1521814.8016339517,
+        "low_window_miss_fraction": 0.9901699029126213,
+        "medium_miss_fraction": 0.04755226590979794
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": true,
+      "candidate": {
+        "candidate_id": "H-S-r1-a060-q015",
+        "family": "H-S",
+        "medium_age_s": 60,
+        "medium_refill_milli_records_per_s": 15,
+        "medium_refill_records_per_s": 0.015,
+        "retries": 1,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.815533980582522,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 29086451.883692086,
+        "high_miss_fraction": 0.0008775348199465974,
+        "immersed_energy_j": 1514882.6954127853,
+        "low_window_miss_fraction": 0.9907766990291261,
+        "medium_miss_fraction": 0.3312806132366201
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": true,
+      "candidate": {
+        "candidate_id": "H-S-r1-a060-q020",
+        "family": "H-S",
+        "medium_age_s": 60,
+        "medium_refill_milli_records_per_s": 20,
+        "medium_refill_records_per_s": 0.02,
+        "retries": 1,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.810679611650485,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 29103762.352297984,
+        "high_miss_fraction": 0.0013525942023694002,
+        "immersed_energy_j": 1529839.1438147582,
+        "low_window_miss_fraction": 0.9905339805825243,
+        "medium_miss_fraction": 0.013916837157167582
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": true,
+      "candidate": {
+        "candidate_id": "H-S-r1-a060-q030",
+        "family": "H-S",
+        "medium_age_s": 60,
+        "medium_refill_milli_records_per_s": 30,
+        "medium_refill_records_per_s": 0.03,
+        "retries": 1,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.82038834951456,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 29100891.090889804,
+        "high_miss_fraction": 0.0018000214954342771,
+        "immersed_energy_j": 1527787.1158388634,
+        "low_window_miss_fraction": 0.9910194174757281,
+        "medium_miss_fraction": 0.0062175178751433515
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": true,
+      "candidate": {
+        "candidate_id": "H-S-r1-a120-q015",
+        "family": "H-S",
+        "medium_age_s": 120,
+        "medium_refill_milli_records_per_s": 15,
+        "medium_refill_records_per_s": 0.015,
+        "retries": 1,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.815533980582522,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 29085561.04672106,
+        "high_miss_fraction": 0.002226460727843659,
+        "immersed_energy_j": 1513940.0292497133,
+        "low_window_miss_fraction": 0.9907766990291261,
+        "medium_miss_fraction": 0.37290787981316076
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": true,
+      "candidate": {
+        "candidate_id": "H-S-r1-a120-q020",
+        "family": "H-S",
+        "medium_age_s": 120,
+        "medium_refill_milli_records_per_s": 20,
+        "medium_refill_records_per_s": 0.02,
+        "retries": 1,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.810679611650485,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 29102535.203643925,
+        "high_miss_fraction": 0.0018000214954342771,
+        "immersed_energy_j": 1528917.986967246,
+        "low_window_miss_fraction": 0.9905339805825243,
+        "medium_miss_fraction": 0.02003657177753292
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": true,
+      "candidate": {
+        "candidate_id": "H-S-r1-a120-q030",
+        "family": "H-S",
+        "medium_age_s": 120,
+        "medium_refill_milli_records_per_s": 30,
+        "medium_refill_records_per_s": 0.03,
+        "retries": 1,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.803398058252426,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 29105233.03436274,
+        "high_miss_fraction": 0.0013525942023694002,
+        "immersed_energy_j": 1530780.8793607433,
+        "low_window_miss_fraction": 0.9901699029126213,
+        "medium_miss_fraction": 0.008234915861544467
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": true,
+      "candidate": {
+        "candidate_id": "H-S-r3-a060-q015",
+        "family": "H-S",
+        "medium_age_s": 60,
+        "medium_refill_milli_records_per_s": 15,
+        "medium_refill_records_per_s": 0.015,
+        "retries": 3,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.81796116504854,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 29088051.62481572,
+        "high_miss_fraction": 0.00043010752688172043,
+        "immersed_energy_j": 1516466.5321588563,
+        "low_window_miss_fraction": 0.9908980582524272,
+        "medium_miss_fraction": 0.34432889440456366
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": true,
+      "candidate": {
+        "candidate_id": "H-S-r3-a060-q020",
+        "family": "H-S",
+        "medium_age_s": 60,
+        "medium_refill_milli_records_per_s": 20,
+        "medium_refill_records_per_s": 0.02,
+        "retries": 3,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.805825242718445,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 29107019.442720138,
+        "high_miss_fraction": 0.0009051669093045233,
+        "immersed_energy_j": 1532803.12697327,
+        "low_window_miss_fraction": 0.9902912621359222,
+        "medium_miss_fraction": 0.009457555246555697
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": true,
+      "candidate": {
+        "candidate_id": "H-S-r3-a060-q030",
+        "family": "H-S",
+        "medium_age_s": 60,
+        "medium_refill_milli_records_per_s": 30,
+        "medium_refill_records_per_s": 0.03,
+        "retries": 3,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.825242718446603,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 29101625.23256432,
+        "high_miss_fraction": 0.00043010752688172043,
+        "immersed_energy_j": 1528956.6733111306,
+        "low_window_miss_fraction": 0.9912621359223301,
+        "medium_miss_fraction": 0.001417158053762734
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": true,
+      "candidate": {
+        "candidate_id": "H-S-r3-a120-q015",
+        "family": "H-S",
+        "medium_age_s": 120,
+        "medium_refill_milli_records_per_s": 15,
+        "medium_refill_records_per_s": 0.015,
+        "retries": 3,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.82038834951456,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 29085355.207508992,
+        "high_miss_fraction": 0.0009051669093045233,
+        "immersed_energy_j": 1514236.1773766624,
+        "low_window_miss_fraction": 0.9910194174757281,
+        "medium_miss_fraction": 0.3818457681595948
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": true,
+      "candidate": {
+        "candidate_id": "H-S-r3-a120-q020",
+        "family": "H-S",
+        "medium_age_s": 120,
+        "medium_refill_milli_records_per_s": 20,
+        "medium_refill_records_per_s": 0.02,
+        "retries": 3,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.813106796116504,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 29105279.931768198,
+        "high_miss_fraction": 0.00043010752688172043,
+        "immersed_energy_j": 1531487.5625071658,
+        "low_window_miss_fraction": 0.9906553398058252,
+        "medium_miss_fraction": 0.01658124626863588
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": true,
+      "candidate": {
+        "candidate_id": "H-S-r3-a120-q030",
+        "family": "H-S",
+        "medium_age_s": 120,
+        "medium_refill_milli_records_per_s": 30,
+        "medium_refill_records_per_s": 0.03,
+        "retries": 3,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.815533980582522,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 29104992.17791918,
+        "high_miss_fraction": 0.00043010752688172043,
+        "immersed_energy_j": 1531207.4664978455,
+        "low_window_miss_fraction": 0.9907766990291261,
+        "medium_miss_fraction": 0.0012832640676831001
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": false,
+      "candidate": {
+        "candidate_id": "H-A-r0-a060-q015",
+        "family": "H-A",
+        "medium_age_s": 60,
+        "medium_refill_milli_records_per_s": 15,
+        "medium_refill_records_per_s": 0.015,
+        "retries": 0,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.91990291262136,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 29088193.120831497,
+        "high_miss_fraction": 0.010310507130765697,
+        "immersed_energy_j": 1494496.060668651,
+        "low_window_miss_fraction": 0.9959951456310681,
+        "medium_miss_fraction": 0.2727212142942296
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": false,
+      "candidate": {
+        "candidate_id": "H-A-r0-a060-q020",
+        "family": "H-A",
+        "medium_age_s": 60,
+        "medium_refill_milli_records_per_s": 20,
+        "medium_refill_records_per_s": 0.02,
+        "retries": 0,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.929611650485437,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 29094708.805535704,
+        "high_miss_fraction": 0.010837854957674259,
+        "immersed_energy_j": 1500678.9190951905,
+        "low_window_miss_fraction": 0.9964805825242719,
+        "medium_miss_fraction": 0.04891671068121264
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": false,
+      "candidate": {
+        "candidate_id": "H-A-r0-a060-q030",
+        "family": "H-A",
+        "medium_age_s": 60,
+        "medium_refill_milli_records_per_s": 30,
+        "medium_refill_records_per_s": 0.03,
+        "retries": 0,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.934466019417474,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 29092643.076351363,
+        "high_miss_fraction": 0.009891660192615039,
+        "immersed_energy_j": 1499043.2713388174,
+        "low_window_miss_fraction": 0.9967233009708737,
+        "medium_miss_fraction": 0.047751195964941186
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": false,
+      "candidate": {
+        "candidate_id": "H-A-r0-a120-q015",
+        "family": "H-A",
+        "medium_age_s": 120,
+        "medium_refill_milli_records_per_s": 15,
+        "medium_refill_records_per_s": 0.015,
+        "retries": 0,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.92718446601942,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 29081813.248612683,
+        "high_miss_fraction": 0.01223231757236274,
+        "immersed_energy_j": 1489337.245361913,
+        "low_window_miss_fraction": 0.9963592233009709,
+        "medium_miss_fraction": 0.3124167571012258
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": false,
+      "candidate": {
+        "candidate_id": "H-A-r0-a120-q020",
+        "family": "H-A",
+        "medium_age_s": 120,
+        "medium_refill_milli_records_per_s": 20,
+        "medium_refill_records_per_s": 0.02,
+        "retries": 0,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.934466019417478,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 27087204.63449403,
+        "high_miss_fraction": 0.009987952227085586,
+        "immersed_energy_j": 1497419.846318959,
+        "low_window_miss_fraction": 0.9967233009708739,
+        "medium_miss_fraction": 0.05020025678912747
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": false,
+      "candidate": {
+        "candidate_id": "H-A-r0-a120-q030",
+        "family": "H-A",
+        "medium_age_s": 120,
+        "medium_refill_milli_records_per_s": 30,
+        "medium_refill_records_per_s": 0.03,
+        "retries": 0,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.932038834951456,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 29093389.6706405,
+        "high_miss_fraction": 0.01127460651325841,
+        "immersed_energy_j": 1499627.10103774,
+        "low_window_miss_fraction": 0.9966019417475728,
+        "medium_miss_fraction": 0.04743451321530408
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": false,
+      "candidate": {
+        "candidate_id": "H-A-r1-a060-q015",
+        "family": "H-A",
+        "medium_age_s": 60,
+        "medium_refill_milli_records_per_s": 15,
+        "medium_refill_records_per_s": 0.015,
+        "retries": 1,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.91504854368932,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 25090579.624527715,
+        "high_miss_fraction": 0.003589730667693785,
+        "immersed_energy_j": 1502612.1485625268,
+        "low_window_miss_fraction": 0.995752427184466,
+        "medium_miss_fraction": 0.3244908790451369
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": false,
+      "candidate": {
+        "candidate_id": "H-A-r1-a060-q020",
+        "family": "H-A",
+        "medium_age_s": 60,
+        "medium_refill_milli_records_per_s": 20,
+        "medium_refill_records_per_s": 0.02,
+        "retries": 1,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.91747572815534,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 27107229.61720845,
+        "high_miss_fraction": 0.003572410901510629,
+        "immersed_energy_j": 1514624.7837281735,
+        "low_window_miss_fraction": 0.9958737864077669,
+        "medium_miss_fraction": 0.013803782913345863
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": false,
+      "candidate": {
+        "candidate_id": "H-A-r1-a060-q030",
+        "family": "H-A",
+        "medium_age_s": 60,
+        "medium_refill_milli_records_per_s": 30,
+        "medium_refill_records_per_s": 0.03,
+        "retries": 1,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.927184466019416,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 27102101.97450916,
+        "high_miss_fraction": 0.0036240067857541414,
+        "immersed_energy_j": 1510690.5442162137,
+        "low_window_miss_fraction": 0.9963592233009708,
+        "medium_miss_fraction": 0.006912460574307977
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": false,
+      "candidate": {
+        "candidate_id": "H-A-r1-a120-q015",
+        "family": "H-A",
+        "medium_age_s": 120,
+        "medium_refill_milli_records_per_s": 15,
+        "medium_refill_records_per_s": 0.015,
+        "retries": 1,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.91747572815534,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 23080374.612714726,
+        "high_miss_fraction": 0.0026116163991842965,
+        "immersed_energy_j": 1497056.9276661142,
+        "low_window_miss_fraction": 0.9958737864077669,
+        "medium_miss_fraction": 0.36449915021581647
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": false,
+      "candidate": {
+        "candidate_id": "H-A-r1-a120-q020",
+        "family": "H-A",
+        "medium_age_s": 120,
+        "medium_refill_milli_records_per_s": 20,
+        "medium_refill_records_per_s": 0.02,
+        "retries": 1,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.91990291262136,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 27106219.36154381,
+        "high_miss_fraction": 0.004005494162622441,
+        "immersed_energy_j": 1513788.3661281578,
+        "low_window_miss_fraction": 0.9959951456310681,
+        "medium_miss_fraction": 0.02273912720291773
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": false,
+      "candidate": {
+        "candidate_id": "H-A-r1-a120-q030",
+        "family": "H-A",
+        "medium_age_s": 120,
+        "medium_refill_milli_records_per_s": 30,
+        "medium_refill_records_per_s": 0.03,
+        "retries": 1,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.898058252427184,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 29119983.36785109,
+        "high_miss_fraction": 0.004872716659394269,
+        "immersed_energy_j": 1522010.606024801,
+        "low_window_miss_fraction": 0.9949029126213592,
+        "medium_miss_fraction": 0.009985392633971604
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": false,
+      "candidate": {
+        "candidate_id": "H-A-r3-a060-q015",
+        "family": "H-A",
+        "medium_age_s": 60,
+        "medium_refill_milli_records_per_s": 15,
+        "medium_refill_records_per_s": 0.015,
+        "retries": 3,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.983009708737864,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 5034398.051513804,
+        "high_miss_fraction": 0.0,
+        "immersed_energy_j": 1474554.2657900378,
+        "low_window_miss_fraction": 0.9991504854368932,
+        "medium_miss_fraction": 0.3472487469937079
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": false,
+      "candidate": {
+        "candidate_id": "H-A-r3-a060-q020",
+        "family": "H-A",
+        "medium_age_s": 60,
+        "medium_refill_milli_records_per_s": 20,
+        "medium_refill_records_per_s": 0.02,
+        "retries": 3,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.983009708737864,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 5049127.964459335,
+        "high_miss_fraction": 0.00047505938242280285,
+        "immersed_energy_j": 1487805.1291617905,
+        "low_window_miss_fraction": 0.9991504854368932,
+        "medium_miss_fraction": 0.009185552043558688
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": false,
+      "candidate": {
+        "candidate_id": "H-A-r3-a060-q030",
+        "family": "H-A",
+        "medium_age_s": 60,
+        "medium_refill_milli_records_per_s": 30,
+        "medium_refill_records_per_s": 0.03,
+        "retries": 3,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.983009708737864,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 5049459.86586955,
+        "high_miss_fraction": 0.0,
+        "immersed_energy_j": 1488094.9823700625,
+        "low_window_miss_fraction": 0.9991504854368932,
+        "medium_miss_fraction": 0.0015661082271651882
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": false,
+      "candidate": {
+        "candidate_id": "H-A-r3-a120-q015",
+        "family": "H-A",
+        "medium_age_s": 120,
+        "medium_refill_milli_records_per_s": 15,
+        "medium_refill_records_per_s": 0.015,
+        "retries": 3,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.980582524271846,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 5032414.851291542,
+        "high_miss_fraction": 0.0,
+        "immersed_energy_j": 1472815.1840414393,
+        "low_window_miss_fraction": 0.9990291262135923,
+        "medium_miss_fraction": 0.3828446017067207
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": false,
+      "candidate": {
+        "candidate_id": "H-A-r3-a120-q020",
+        "family": "H-A",
+        "medium_age_s": 120,
+        "medium_refill_milli_records_per_s": 20,
+        "medium_refill_records_per_s": 0.02,
+        "retries": 3,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.983009708737864,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 5048381.960850947,
+        "high_miss_fraction": 0.0,
+        "immersed_energy_j": 1487185.6793927469,
+        "low_window_miss_fraction": 0.9991504854368932,
+        "medium_miss_fraction": 0.016722821676667
+      },
+      "n_runs": 5
+    },
+    {
+      "all_runs_physically_feasible": false,
+      "candidate": {
+        "candidate_id": "H-A-r3-a120-q030",
+        "family": "H-A",
+        "medium_age_s": 120,
+        "medium_refill_milli_records_per_s": 30,
+        "medium_refill_records_per_s": 0.03,
+        "retries": 3,
+        "retry_semantics": "requested_per_leg_cycle_limit_pending_acoustic_semantics_gate"
+      },
+      "empirically_feasible": false,
+      "max_normalized_service_violation": 18.983009708737864,
+      "mean_run_metrics": {
+        "full_mission_energy_j": 5049024.986166796,
+        "high_miss_fraction": 0.0,
+        "immersed_energy_j": 1487776.6623233855,
+        "low_window_miss_fraction": 0.9991504854368932,
+        "medium_miss_fraction": 0.0008731810846028803
+      },
+      "n_runs": 5
+    }
+  ],
+  "claim_scope": "empirical_selection_not_global_optimality_or_confirmed_feasibility",
+  "context_sha256": "44027b61c7313cfb1a249efffbc27adf92f265d8599872c7314e2ab23a394c88",
+  "families": {
+    "D-P": {
+      "diagnostic_candidate_id": null,
+      "selected_candidate_id": "D-P-r3",
+      "status": "empirically_feasible"
+    },
+    "H-A": {
+      "diagnostic_candidate_id": null,
+      "selected_candidate_id": null,
+      "status": "no_physically_feasible_candidate"
+    },
+    "H-S": {
+      "diagnostic_candidate_id": "H-S-r0-a120-q030",
+      "selected_candidate_id": null,
+      "status": "no_service_feasible_candidate"
+    }
+  },
+  "hardware_sha256": "ab482d9820f4a337a351945b0cab67eb40cbb5b2ec864978e187bc81a4726168",
+  "model_sha256": "ff69c4f2c75b19763fbcf1b71a68ac322197e25753977c04e1137c6e1ddfa5da",
+  "schema_version": "sensors-closure-protocol-v2",
+  "selection_scope": "nominal_tuning_only",
+  "training_results_sha256": "cd26340670f4b3e534611e14c3a1ae028e7cd0759f9d9ed7775fd9107e7f926c",
+  "training_seeds": [
+    301,
+    302,
+    303,
+    304,
+    305
+  ]
+}

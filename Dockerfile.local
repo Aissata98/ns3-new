@@ -1,0 +1,27 @@
+# Optional OFFLINE cached variant. UNBUILT at package preparation.
+# This documentary alternative does NOT impose the user's runtime resource cap.
+# Use local_build.py instead: it creates a NEW bounded build container from the
+# exact image ID and commits it. Direct Dockerfile invocation does not pin a tag.
+ARG LOCAL_BASE=edc-ns3:3.40
+FROM ${LOCAL_BASE}
+ENV NS3_DIR=/opt/ns-allinone-3.40/ns-3.40
+COPY MODEL_MANIFEST.json LOCAL_BASE_IDENTITY.json replay.py local_build.py /artifact/
+COPY model/ /artifact/model/
+RUN python3 /artifact/replay.py verify-model \
+    && python3 /artifact/local_build.py _check-dependencies --output /artifact/LOCAL_DEPENDENCY_CHECK.json
+COPY model/ ${NS3_DIR}/scratch/
+# Reuse existing dependency source and build cache without chowning the large
+# immutable src tree. A real unprivileged build user owns only build outputs.
+RUN useradd --uid 10001 --create-home ns3builder \
+    && chown ns3builder:ns3builder ${NS3_DIR} ${NS3_DIR}/.lock-ns3_linux_build \
+    && chown -R ns3builder:ns3builder ${NS3_DIR}/scratch ${NS3_DIR}/build ${NS3_DIR}/cmake-cache /artifact
+USER ns3builder
+ENV USER=ns3builder
+WORKDIR ${NS3_DIR}
+RUN git config --global --add safe.directory ${NS3_DIR}/src/aqua-sim-ng \
+    && ./ns3 configure --build-profile=optimized --enable-examples --disable-python --disable-werror \
+    && ./ns3 build -j 2 edc-reviewed test_closure_phy
+RUN python3 /artifact/replay.py _record-build --output /artifact/BUILD_REPRODUCED.json
+WORKDIR /output
+ENTRYPOINT ["python3", "/artifact/replay.py"]
+CMD ["--help"]

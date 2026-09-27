@@ -1,6 +1,0 @@
-time,event,packetId,sourceBsn,priority,payloadBytes,ddnIndex,sinkIndex,attempt,distanceM,outcome
-1.000000,generated_burst,1,0,2,64,4,-1,0,-1.000000,created_at_ddn
-1.000000,direct_tx,1,0,2,64,4,8,1,500.000000,attempt
-13.026923,direct_cycle_exhausted,1,0,2,64,4,8,1,500.000000,requeued
-14.000000,direct_tx,1,0,2,64,4,8,1,500.000000,attempt
-26.026923,deadline_expired,1,0,2,64,4,8,1,500.000000,after_attempt

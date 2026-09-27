@@ -1,0 +1,45 @@
+{
+  "schema": "reviewed-v6-artifact-offline-checks-v1",
+  "checked_on": "2026-09-20",
+  "status": "passed_offline_only",
+  "unit_test_command": "python3 -B -m unittest -v test_replay.py",
+  "unit_tests_passed": 27,
+  "unit_test_seconds": 0.205,
+  "runtime_cpu_limit": 2,
+  "runtime_memory_and_swap_limit_bytes": 4294967296,
+  "runtime_limit_change_authorized_by_user": true,
+  "source_files_verified": 11,
+  "source_model_changed": false,
+  "actual_archive_check": {
+    "job_id": "040-nominal-H-S-r0-a120-q030-s301",
+    "job_sha256": "3b357c96ca57eccf9847a9d430ea37c8b194c6c549de9078955229d12011987f",
+    "archive_index_sha256": "b8befee7848efa2440d5e418df1c75ce47108d37ad9e5984cfe854ec60827902",
+    "status": "passed",
+    "deep_compression_check": true,
+    "verified_members": 12
+  },
+  "dry_run_build_command_validated": true,
+  "actual_archive_plan_command_validated": true,
+  "actual_archive_plan_argv_count": 137,
+  "scientific_parameters_changed": false,
+  "docker_build_or_replay_invocations": 0,
+  "docker_read_only_inspection_performed_separately": true,
+  "image_downloads": 0,
+  "image_builds": 0,
+  "network_simulations_executed": 0,
+  "large_results_copied": false,
+  "github_publication_performed": false,
+  "hashes": {
+    "replay.py": "d7a6a2618351c2b94e74062330f7762a39dc68933d1aa7dc9c2d0c3a211ba351",
+    "test_replay.py": "d176507d894c9499c8e59c0b5857f3354b70010a9d211418dc856d4743c54998",
+    "Dockerfile": "f5c02fd558d36d46f330f733483660bb7d0a56590af9970d543c8f4a8c2a8b85",
+    "MODEL_MANIFEST.json": "77d59aeb9ff721386297fbb0820ff0ba4da6cf2930a20101a4e95197cb267803",
+    "README.md": "45ce33d4df63458596b7072ef1f54192317dbf3164acd334fb9234625ffff493"
+  },
+  "remaining": [
+    "Build the new Dockerfile under a separately accepted resource budget.",
+    "Run compiled component checks and, only if separately authorized and charged, one archived-job replay.",
+    "Confirm redistribution notices and author-owned source licensing before a public release.",
+    "Package or reference the large immutable results archive and publish its external checksum separately."
+  ]
+}

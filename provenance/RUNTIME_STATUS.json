@@ -1,0 +1,17 @@
+{
+  "schema": "reviewed-v6-release-runtime-status-v1",
+  "recorded_on": "2026-09-20",
+  "historical_network_runs_recorded": 319,
+  "historical_tuning_runs": 195,
+  "historical_post_selection_runs": 105,
+  "historical_qa_runs": 19,
+  "historical_model_build": "BUILD_INTEGRATED_V6.json",
+  "historical_final_summary": "FINAL_SUMMARY_V6.json",
+  "historical_ledger": "CAMPAIGN_LEDGER.json",
+  "new_fresh_dockerfile_built": false,
+  "new_cached_build_executed": false,
+  "new_artifact_replay_executed": false,
+  "packaging_started_network_simulations": 0,
+  "new_binary_or_field_validation_claimed": false,
+  "scope": "Historical V6 results and offline packaging checks only. Source ZIP build recipes remain unexecuted. No public upload has been performed."
+}

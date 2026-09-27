@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "Please cite the manuscript associated with this research artifact. This revision is under author review."
+title: "Direct Acoustic versus AUV-Assisted Hybrid Reporting for Subsea Pipeline Monitoring: A Matched End-to-End Evaluation"
+type: software
+version: "reviewed-v6-20260920"
+authors:
+  - family-names: "Diallo"
+    given-names: "Aissata Mamadou"
+  - family-names: "Rafalia"
+    given-names: "Najat"
+  - family-names: "Abouchabaka"
+    given-names: "Jaafar"
+repository-code: "https://github.com/Aissata98/ns3-new"
+abstract: "Finite-resource simulation model, frozen experiment definitions, and provenance for a controlled subsea reporting study. The local revision package has not yet been published to the development repository."

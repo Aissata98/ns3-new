@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "contract_id": "sensors-closure-20260920-v2",
+  "status": "awaiting_integrated_pilot_evidence",
+  "authorization": "Previously approved closure plan; resumed author request to finish experiments. No manuscript change, hardware substitution or submission authorized by this contract.",
+  "accepted_plan_sha256": "a529939d79f13a07fcb74baea9f8f78a7a593e62bb990b0e0c4a0a30f0f9327e",
+  "accepted_plan_path": "output/revision/sensors-20260920-physical-validation/PLAN_CLOTURE_REVISION.md",
+  "model_sha256": null,
+  "scope": {
+    "reference_architecture": "Pipeline at 1000 m, dedicated vertical ingress to collection gateways at 500 m, original shared surface infrastructure.",
+    "field_validation_claim": false,
+    "market_prevalence_claim": false,
+    "allow_automatic_hardware_upgrade": false,
+    "allow_automatic_horizon_shortening": false,
+    "interpretation": "Source-informed finite-resource simulation. Declared link, electrical, memory and manoeuvre hypotheses are not commercial hardware calibration or complete embedded implementation certification."
+  },
+  "manifest": {
+    "path": "MANIFEST_EXPERIMENT.json",
+    "sha256": "7dae88e79eaed6856e54fa2a6cc8ea81e486eb702724756088c982cae23dcb60",
+    "review": "Root numerical review before any new network pilot: original nominal geometry and91798.03-s horizon retained. The longer corridor uses that same fixed horizon, explicitly differing from the old179596.06-s long run so duration is not changed with length. Electrical/link hypotheses are distinguished from manufacturer facts; no policy outcomes used for parameter choice."
+  },
+  "acoustic": {
+    "band_khz": [20, 34],
+    "study_center_khz": 27,
+    "service_mode": "TS5 service-rate scale, not MDFT waveform reproduction",
+    "nominal_mode_bps": 6000,
+    "maximum_documented_mode_bps": 9000,
+    "fixed_range_m": 1000,
+    "fixed_range_scope": "Maximum role gate only, not a universal radius; BSN/DRN remain300m as listed below.",
+    "role_ranges_m": {"BSN": 300, "DRN": 300, "DDN": 1000, "AUV": 1000, "SINK": 1000},
+    "tx_electrical_power_w": 10,
+    "rx_active_power_w": 2,
+    "idle_w": 0.05,
+    "sleep_w": 0.005,
+    "power_provenance": "Fixed study hypotheses, not measured commercial modem draw; same values for shared D/H owners.",
+    "frame_and_ack_model": "512-B application fragments; reviewed HIGH/MED header51 B and LOW75 B, lower ns-3 framing explicitly additional. Half-duplex PHY ledger, real reverse record ACK51+16 B, encoded control61 B+body. Retry candidate r permits r+1 attempts over a leg lifetime. ACK grace12s begins after observed local PHY completion; explicit local refusals settle the attempt/retry directly. Silent lower-MAC stalls retain the hard record deadline, not a guaranteed ACK-latency bound.",
+    "channel_provenance": "27-kHz absorption approximation, 60-dB study link margin and fixed role gates, modeled ALOHA; no calibrated Sonardyne BER or automatic range enlargement."
+  },
+  "optical": {
+    "emitter_electrical_w": 30,
+    "receiver_electrical_w": 10,
+    "wavelength_nm": 405,
+    "selected_bit_rate_bps": 2500000,
+    "study_contact_gate_m": 30,
+    "startup_delay_s": 1,
+    "sleep_power_w": 0,
+    "sleep_provenance": "Optical interfaces are switched off outside finite sessions; shared host and acoustic sleep/idle draw remain on their owner ledger. This is a power-gated study policy, not measured vendor standby draw.",
+    "supply_conversion_efficiency": 0.9,
+    "channel_model": "Timed one-way optical DATA, conservative continuous moving-contact gate; nominal whole-frame probability1 and declared perturbation0.9. Actual existing acoustic interfaces carry finite wake/credit and confirmation. No second optical pair, Gaussian UV calibration or free reverse ACK.",
+    "engineering_parameters": "1-s startup, 30-s listen window, 5-s poll, 12-s ACK grace, 0.01-s turnaround, 3 lifetime attempts, 4096 receipt slots and8-MiB receive credit; all specified before policy outcomes."
+  },
+  "vehicle": {
+    "battery_kwh": 67,
+    "reference_water_speed_kn": 3,
+    "reference_endurance_hours": [65, 76],
+    "reserve_fraction": 0.2,
+    "nominal_observation_s": 91798.03,
+    "operation_baseline_w": 900,
+    "energy_model_status": "Single finite owner shared by operation, radio and optical interfaces. Baseline900W is a study assumption at published endurance scale, not a fitted propulsion curve. External recovery600s/540kJ is explicitly charged.",
+    "certified_route_catalogue": "Software-checked continuous constant-speed route primitives, 100-m horizontal turn radius, 50-m minimum 3D radius and finite-pitch/depth constraints; static and adaptive use the same primitives. Certification here means mathematical constraint checking only, not vehicle field qualification.",
+    "return_and_offload_geometry": "Existing surface sinks served by submerged finite-radius moving paths. Original first-sink rendezvous at50m is home. Every admitted action retains service/return/recovery and reserve budget; no recharge or surface teleport. H-A uses one/two collection candidates followed by offload and return, selected from received encoded reports only."
+  },
+  "workload": {
+    "channels": 6,
+    "sample_rate_hz": 10,
+    "study_sample_bits": 16,
+    "window_s": 300,
+    "raw_window_bytes": 36000,
+    "study_chunk_max_bytes": 25000,
+    "bookkeeping_per_chunk_bytes": 64,
+    "oldest_sample_age_retained": true,
+    "high_deadline_s": 120,
+    "medium_deadline_s": 600,
+    "low_deadline_after_acquisition_s": 30000,
+    "low_deadline_origin": "oldest_sample",
+    "cohorts": "All complete acquisitions released before the fixed horizon are generated. Complete-window misses use the mature cohort; later generated backlog remains reported separately."
+  },
+  "storage_and_ingress": {
+    "outbox_capacity_bytes": 16777216,
+    "source_archive_capacity_bytes": 1073741824,
+    "working_ram_capacity_bytes": 65536,
+    "working_ram_scope": "Dedicated cable staging RAM at each endpoint, not total embedded RAM.",
+    "vehicle_store_capacity_bytes": 16777216,
+    "allocation_provenance": "Proposed semantic allocations, not inferred manufacturer RAM. Vehicle usable payload allocation deducts source/RX control slots, optical receipts/sessions and adaptive report cache. Generic lower MAC memory is not certified by these application bounds.",
+    "vertical_separation_m": 500,
+    "dedicated_ingress_medium": "One finite powered serial-service abstraction per site, common nonpreemptive priority admission for HIGH/MED/LOW; not a qualified SMART-native500m RS485 link.",
+    "dedicated_ingress_service_bps": 9600,
+    "retention_and_backpressure": "Source retains its physical copy until actual returned cable ACK after durable gateway commit; a committed backup is not counted as a second unique record. Finite archive, staging and persistent outbox; bounded retries, mission-long retention, explicit refusal/expiry/depletion. HIGH/MED upstream acoustic sender confirms only after cable confirmation.",
+    "cable_termination_and_power_evidence": "500m/2e8m/s propagation, 10 wire bits/byte, 16-B DATA/ACK descriptors plus LOW24B, 10-ms durable write and1-ms turnaround study hypotheses. Source logger budget4.32MJ, baseline0.2W, cable TX0.2/RX0.1W; gateway cable TX0.2/RX0.1W from its existing owner. No parallel cable or hidden battery."
+  },
+  "resource_policy": {
+    "max_network_runs": 400,
+    "cpu_limit": 2,
+    "maximum_isolated_workers": 2,
+    "memory_limit_bytes": 6442450944,
+    "minimum_start_free_bytes": 4294967296,
+    "per_run_stop_free_bytes": 1500000000,
+    "inter_run_pause_s": 0.5,
+    "thermal_warning_response": "stop",
+    "missing_thermal_status_response": "no unattended campaign launch",
+    "delete_old_results": false
+  },
+  "required_evidence": {
+    "acoustic_physical_family_and_range": null,
+    "reverse_ack_and_retry_semantics": null,
+    "complete_state_energy_and_finite_batteries": null,
+    "finite_ingress_storage_and_conservation": null,
+    "continuous_route_contact_and_safe_return": null,
+    "causal_planner_and_control_telemetry": null,
+    "paired_input_and_outcome_audit": null,
+    "compiled_model_and_regression": null
+  },
+  "protected_inputs": [
+    {"path": "edc.cc", "sha256": "5d3df3eb7581ede0d7471559e35e0b151732b2edb68585e1625e735329d3591d"},
+    {"path": "output/revision/sensors-20260920-physical-validation/sim/edc.cc", "sha256": "d49197530b057bcfa5023c4be1c89c49863e694e27c07321ba60da313b997554"},
+    {"path": "output/revision/sensors-20260920-physical-validation/sim/external_workload_replay.h", "sha256": "008baac043989e6235360d42519063d5e1ee5a9ce287ae0bf0687555cac184dd"}
+  ]
+}
